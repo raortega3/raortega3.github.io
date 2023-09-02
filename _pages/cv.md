@@ -36,8 +36,6 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-  {% endfor %}</ul>
-  
 Recent Service 
 ======
 * PhD representative: WellMed
