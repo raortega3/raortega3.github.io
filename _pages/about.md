@@ -7,5 +7,5 @@ redirect_from:
   - /about/
   - /about.html
 ---
-![Me](images/5E56ED9E-2616-4950-9A30-C7FF45DA4356_1_105_c.jpeg){:height="36px" width="36px"}
+![Me](images/5E56ED9E-2616-4950-9A30-C7FF45DA4356_1_105_c.jpeg){:height="80px" width="80px"}
 Hello! I am currently an MD-PhD student in the MSTP at Einstein College of Medicine. 
