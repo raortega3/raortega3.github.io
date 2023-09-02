@@ -6,5 +6,5 @@ author_profile: true
 ---
 
 
-  Please find my publications on <u><a href="{{author.googlescholar}}"> Google Scholar</a>.</u>
+  Please find my publications on [Google Scholar](https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ)
 
