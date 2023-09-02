@@ -9,9 +9,13 @@ redirect_from:
 
 {% include base_path %}
 
+Hometown
+======
+El Paso, TX
+
 Education
 ======
-* AS: General studies, El Paso Community College, 2005 (El Paso, TX)
+* AA: General studies, El Paso Community College, 2005 (El Paso, TX)
 * BS: Psychology (Statistics minor), University of Texas at El Paso, 2008 (El Paso, TX)
 * MS: Mathematical Statistics, University of Texas at El Paso, 2011 (El Paso, TX)
 * MD-PhD: Albert Einstein College of Medicine, 2030 (expected, Bronx, NY)
@@ -27,14 +31,12 @@ PhD Lab Rotations
 Relevant Work experience
 ======
 * Aug 2012 - June 2023: Movement Disorders Research
-  * Mount Sinai School of Medicine
+  * Mount Sinai School of Medicine, New York, NY
   * PI: Dr. Rachel Saunders-Pullman, MD, MPH
 
 Publications
 ======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+ Please find my publications on [Google Scholar](https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ)
   
 Recent Service 
 ======
