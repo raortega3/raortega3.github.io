@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Robert Ortega"
   avatar           : "EB775E6B-FC08-4962-A10C-CF3E1AE23195_1_201_a.heic"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : "MD-PhD student @ Albert Einstein COM (MSTP)"
   MD-PhD (MSTP)    : "Albert Einstein College of Medicine"
   Location         : "Bronx, NY"
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : 
   google_plus      :
   keybase          :
   instagram        :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "rbrt__o"
   vine             :
   weibo            :
   xing             :
