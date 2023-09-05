@@ -7,4 +7,4 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Hello! I am currently an MD-PhD student in the MSTP at the [Albert Einstein College of Medicine](https://youtu.be/G7anNDddN_M). 
+I am currently an MD-PhD student in the MSTP at the [Albert Einstein College of Medicine](https://youtu.be/G7anNDddN_M). 
