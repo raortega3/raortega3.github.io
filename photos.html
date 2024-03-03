@@ -15,10 +15,11 @@
         }
 
         .photo {
-            max-height: 2in; /* Set maximum height to 2 inches */
+            max-width: 200px; /* Set maximum width */
+            max-height: 200px; /* Set maximum height */
             width: auto; /* Automatically adjust width to maintain aspect ratio */
+            height: auto; /* Automatically adjust height to maintain aspect ratio */
             border-radius: 5px; /* Optional: Add rounded corners */
-            position: absolute; /* Set position to absolute */
         }
     </style>
 </head>
@@ -54,8 +55,8 @@
             const viewportHeight = window.innerHeight;
 
             photos.forEach(photo => {
-                const randomX = Math.floor(Math.random() * (viewportWidth - photo.width));
-                const randomY = Math.floor(Math.random() * (viewportHeight - photo.height));
+                const randomX = Math.floor(Math.random() * (viewportWidth - 200)); // Subtracting the maximum width
+                const randomY = Math.floor(Math.random() * (viewportHeight - 200)); // Subtracting the maximum height
                 photo.style.left = `${randomX}px`;
                 photo.style.top = `${randomY}px`;
             });
