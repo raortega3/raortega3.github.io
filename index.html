@@ -11,6 +11,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
         header {
             background-color: black;
@@ -41,9 +42,9 @@
             margin-bottom: 20px;
             border: 3px solid white; /* Add white border */
         }
-  .bio {
+        .bio {
             max-width: 300px;
-            margin: 20px; /* Add margin for spacing */
+            margin: 20px auto; /* Add margin for spacing */
             padding: 20px;
             border: 1px solid white; /* Add white border */
             border-radius: 10px; /* Add border radius */
@@ -51,6 +52,9 @@
         }
         .bio p {
             margin-top: 0; /* Remove default margin for the first paragraph */
+        }
+        .bio p b {
+            color: yellow; /* Change color of <b> elements */
         }
         a {
             color: white;
@@ -67,15 +71,13 @@
     </header>
     <img src="images/183E403D-6CEF-401B-AE51-1CAE397106FF_1_105_c.jpeg" alt="!">
     <section class="bio">
-        <p>
-            <p>Hello and welcome!</p>
-            <p><B>Bio</B>: I am a first year MD-PhD trainee at Albert Einstein College of Medicine</p>
-            <p><B>Current scientific interests</B>: Statistical genetics and prodromal phase biomarkers</p>
-            <p><B>Current medical interests</B>: Neurology, psychiatry, internal medicine, pathology</p>
-            <p><B>Google Scholar</B> <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Link</a>.
-</p>
-        </p>
-
+        <p>Hello and welcome!</p>
+        <ul>
+            <li><b>Bio</b>: I am a first year MD-PhD trainee at Albert Einstein College of Medicine.</li>
+            <li><b>Current scientific interests</b>: Statistical genetics and prodromal phase biomarkers.</li>
+            <li><b>Current medical interests</b>: Neurology, psychiatry, internal medicine, pathology.</li>
+        </ul>
+        <p><b>Google Scholar</b>: <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Link</a>.</p>
     </section>
 </body>
 </html>
