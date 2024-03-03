@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Einstein Life</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        .photo {
+            position: absolute;
+            max-width: 200px; /* Adjust the maximum width as needed */
+            height: auto;
+            border-radius: 5px; /* Optional: Add rounded corners */
+        }
+    </style>
 </head>
 <body>
     <h1>Einstein!</h1>
     <!-- Add your photo collage layout here -->
-    
     <div class="photo-grid">
         <img src="images/IMG_2821.jpeg" alt="Photo"></a>
         <img src="images/IMG_2770.jpeg.jpg" alt="Photo"></a>
@@ -29,38 +45,20 @@
         <img src="images/IMG_3813.jpeg" alt="Photo"></a>
         <img src="images/IMG_0633.jpeg" alt="Photo"></a>
         <img src="images/IMG_1420.jpeg" alt="Photo"></a>
-
         <!-- Add more photo thumbnails with their respective large versions -->
     </div>
 
-body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Prevent scrollbars */
-}
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const photos = document.querySelectorAll('.photo');
 
-.photo {
-    position: absolute;
-    max-width: 200px; /* Adjust the maximum width as needed */
-    height: auto;
-    border-radius: 5px; /* Optional: Add rounded corners */
-}
-
-    window.addEventListener('DOMContentLoaded', () => {
-    const photos = document.querySelectorAll('.photo');
-
-    photos.forEach(photo => {
-        const randomX = Math.floor(Math.random() * window.innerWidth);
-        const randomY = Math.floor(Math.random() * window.innerHeight);
-        photo.style.left = `${randomX}px`;
-        photo.style.top = `${randomY}px`;
-    });
-});
+            photos.forEach(photo => {
+                const randomX = Math.floor(Math.random() * window.innerWidth);
+                const randomY = Math.floor(Math.random() * window.innerHeight);
+                photo.style.left = `${randomX}px`;
+                photo.style.top = `${randomY}px`;
+            });
+        });
+    </script>
 </body>
-
 </html>
-
-
