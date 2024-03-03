@@ -36,7 +36,9 @@
     </style>
 </head>
 <body>
+    
     <h1>Life @ Einstein</h1>
+    <div class="photo-grid">
     <!-- Row 1 -->
     <img class="photo" src="images/IMG_2821.jpeg" alt="Photo" style="left: 50px; top: 100px; onclick="enlargeImage(this)">
     <img class="photo" src="images/IMG_2770.jpeg" alt="Photo" style="left: 250px; top: 100px; onclick="enlargeImage(this)">
@@ -58,6 +60,24 @@
     <img class="photo" src="images/IMG_3813.jpeg" alt="Photo" style="left: 650px; top: 700px; onclick="enlargeImage(this)">
     <img class="photo" src="images/IMG_0633.jpeg" alt="Photo" style="left: 850px; top: 700px; onclick="enlargeImage(this)">
     <img class="photo" src="images/IMG_1420.jpeg" alt="Photo" style="left: 1050px; top: 700px; onclick="enlargeImage(this)">
+</div>
+
+    <!-- Enlarged photo (initially hidden) -->
+    <img id="enlargedPhoto" class="enlarged-photo" onclick="shrinkImage(this)">
+    
+    <script>
+        // Function to enlarge the clicked image
+        function enlargeImage(img) {
+            document.getElementById('enlargedPhoto').src = img.src; // Set source of enlarged photo
+            document.getElementById('enlargedPhoto').style.display = 'block'; // Display the enlarged photo
+        }
+
+        // Function to shrink the enlarged image when clicked
+        function shrinkImage(img) {
+            img.style.display = 'none'; // Hide the enlarged photo
+        }
+    </script>
+        
 </body>
 </html>
 
