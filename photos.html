@@ -32,7 +32,35 @@
 
         <!-- Add more photo thumbnails with their respective large versions -->
     </div>
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.photo {
+    position: absolute;
+    max-width: 200px; /* Adjust the maximum width as needed */
+    height: auto;
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+    window.addEventListener('DOMContentLoaded', () => {
+    const photos = document.querySelectorAll('.photo');
+
+    photos.forEach(photo => {
+        const randomX = Math.floor(Math.random() * window.innerWidth);
+        const randomY = Math.floor(Math.random() * window.innerHeight);
+        photo.style.left = `${randomX}px`;
+        photo.style.top = `${randomY}px`;
+    });
+});
 </body>
+
 </html>
 
 
