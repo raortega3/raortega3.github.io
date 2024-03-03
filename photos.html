@@ -14,10 +14,17 @@
             overflow: hidden; /* Prevent scrollbars */
         }
 
+.photo-grid {
+            text-align: center; /* Center-align the images */
+        }
+
         .photo {
-            max-width: 200px; /* Set maximum width */
-            height: auto; /* Automatically adjust height to maintain aspect ratio */
-            border-radius: 5px; /* Optional: Add rounded corners */
+            display: inline-block; /* Display images in a line */
+            max-height: 200px; /* Set maximum height for images */
+            width: auto; /* Let the width adjust automatically to maintain aspect ratio */
+            margin: 10px; /* Add some spacing between images */
+        }
+
             
             media only screen and (max-width: 600px) {
     .photo {
