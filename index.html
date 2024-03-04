@@ -5,17 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Page</title>
     <style>
-        /* Base styles */
         body {
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
             background-color: black;
             color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
         }
 
-        /* Welcome screen */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .toolbar {
+            display: flex;
+            justify-content: center;
+        }
+
+        .toolbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        .toolbar a:hover {
+            background-color: #555;
+        }
+
         .welcome-screen {
             position: fixed;
             top: 0;
@@ -23,130 +50,69 @@
             width: 100%;
             height: 100%;
             background-image: url("images/00B141CD-1564-4E74-9A70-6E2F10A10E21_1_105_c.jpeg");
-            background-size: contain;
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            color: white;
             opacity: 1;
-            animation: fadeOut 10s forwards;
+            animation: fadeOut 2s forwards 2s;
+            z-index: 999;
         }
 
         @keyframes fadeOut {
             0% { opacity: 1; }
-            100% { opacity: 0; }
+            100% { opacity: 0; display: none; }
         }
 
-        /* Hide the welcome screen after animation */
-        .welcome-hidden {
-            display: none;
-        }
-
-        /* Homepage content */
         #content {
+            padding-top: 100px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .content-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .top-right img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 3px solid white;
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 24px;
-            text-align: center;
+            top: 20px;
+            right: 20px;
         }
 
-        /* Toolbar */
-        .toolbar {
-            background-color: #333;
-            text-align: center;
-            padding: 8px 16px;
-            margin: 0 25px;
+        .bio {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
-        .toolbar a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            margin: 0 25px;
-        }
-
-        .toolbar a:hover {
-            background-color: #555;
-        }
-
-        /* Responsive styles */
         @media (max-width: 768px) {
-            .toolbar {
-                display: block;
-                position: relative;
-                z-index: 1000;
-                background-color: rgba(0, 0, 0, 0.8);
-                padding: 10px;
-                margin-top: 10px;
-            }
-
-            .welcome-screen {
-                background-size: contain;
-                padding: 20px;
-            }
-
-            .name {
-                font-size: 20px;
-            }
-
-            .top-right {
+            .top-right img {
                 width: 100px;
                 height: 100px;
-                margin-top: 20px;
+                top: 10px;
+                right: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Welcome screen -->
-    <div class="welcome-screen" id="welcomeScreen">
-        <div class="welcome-text"></div>
-    </div>
-
-    <!-- Homepage content -->
-    <div id="content" class="welcome-hidden">
-        <div class="text-container">
-            <div class="name">Welcome!
-                <img src="images/183E403D-6CEF-401B-AE51-1CAE397106FF_1_105_c.jpeg" alt="!" class="top-right">
-            </div>
-                
-            <section class="bio">
-                <div class="subname">Robert Ortega, MS</div>
-                <ul>
-                    <li><b>About me</b>: First year MD-PhD trainee at Albert Einstein College of Medicine. Father and husband.</li>
-                    <li><b>Hometown</b>: El Paso, Texas</li>
-                    <li><b>Current scientific interests</b>: Statistical genetics, subgroups, and biomarkers.</li>
-                    <li><b>Current medical interests</b>: Neurology, psychiatry, internal medicine, pathology.</li>
-                    <li><b>Email</b>: roberto.ortega[at]einsteinmed.edu</li>
-                    <li><b>Education:</b></li>
-                    <div class="indented-line">
-                        <li>El Paso Community College: AA</li>
-                        <li>University of Texas at El Paso: MS (Mathematical Statistics), BS (Psychology/Statistics)</li>
-                        <li>Albert Einstein College of Medicine (MSTP): MD, PhD</li>
-                    </div>
-                </ul>
-            </section>
-        </div>
-    </div>
-
     <header>
         <div class="toolbar">
-            <!-- Links -->
             <a href="CV.html">CV</a>
             <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
             <a href="photos.html">Life @ Einstein</a>
@@ -155,11 +121,47 @@
         </div>
     </header>
 
+    <div class="welcome-screen"></div>
+
+    <div id="content">
+        <div class="content-inner">
+            <div class="name">Welcome!</div>
+            <div class="top-right"><img src="images/183E403D-6CEF-401B-AE51-1CAE397106FF_1_105_c.jpeg" alt="Profile Image"></div>
+            <div class="bio">
+                <div class="subname">Robert Ortega, MS</div>
+                <p>
+                    <b>About me:</b> First year MD-PhD trainee at Albert Einstein College of Medicine. Father and husband.
+                </p>
+                <p>
+                    <b>Hometown:</b> El Paso, Texas
+                </p>
+                <p>
+                    <b>Current scientific interests:</b> Statistical genetics, subgroups, and biomarkers.
+                </p>
+                <p>
+                    <b>Current medical interests:</b> Neurology, psychiatry, internal medicine, pathology.
+                </p>
+                <p>
+                    <b>Email:</b> roberto.ortega[at]einsteinmed.edu
+                </p>
+                <p>
+                    <b>Education:</b>
+                </p>
+                <div class="indented-line">
+                    <ul>
+                        <li>El Paso Community College: AA</li>
+                        <li>University of Texas at El Paso: MS (Mathematical Statistics), BS (Psychology/Statistics)</li>
+                        <li>Albert Einstein College of Medicine (MSTP): MD, PhD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // After 4 seconds, fade out the welcome screen and display the homepage
+        // After 4 seconds, fade out the welcome screen
         setTimeout(function() {
-            document.getElementById('welcomeScreen').classList.add('welcome-hidden');
-            document.getElementById('content').classList.remove('welcome-hidden');
+            document.querySelector('.welcome-screen').style.opacity = '0';
         }, 4000);
     </script>
 </body>
