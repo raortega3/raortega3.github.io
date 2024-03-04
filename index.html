@@ -29,10 +29,10 @@ background-image: url("images/00B141CD-1564-4E74-9A70-6E2F10A10E21_1_105_c.jpeg"
             transition: opacity 4s ease-in;
         }
 
-        @keyframes fadeOut {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
-        }
+     @keyframes fadeInHoldFadeOut {
+    0%, 33.33% { opacity: 1; } /* Fade in and hold for 4 seconds (33.33% of the animation duration) */
+    66.66%, 100% { opacity: 0; } /* Fade out for the remaining duration */
+}
 
         /* Hide the welcome screen after animation */
         .welcome-hidden {
