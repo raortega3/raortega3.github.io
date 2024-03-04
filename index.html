@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Page</title>
     <style>
+        /* Base styles */
+        body {
+            padding: 20px;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Welcome screen */
         .welcome-screen {
             position: fixed;
             top: 0;
@@ -12,22 +23,20 @@
             width: 100%;
             height: 100%;
             background-image: url("images/00B141CD-1564-4E74-9A70-6E2F10A10E21_1_105_c.jpeg");
-            background-size: contain; /* Cover the entire screen */
-            background-position: center; /* Center the image */
+            background-size: contain;
+            background-position: center;
             background-repeat: no-repeat;
-            background-color: black; 
+            background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
-            text-align: left; /* Align the name to the left */
-            margin-top: 65px; /* Adjust as needed */
-            color: white; /* Text color */
             text-align: center;
+            color: white;
             opacity: 1;
-            animation: fadeOut 10s forwards; /* Apply the fadeOut animation */
+            animation: fadeOut 10s forwards;
         }
 
         @keyframes fadeOut {
@@ -40,16 +49,7 @@
             display: none;
         }
 
-        .name {
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: left; /* Align the name to the left */
-            margin-top: 65px; /* Adjust as needed */
-            transition: margin-left 4s ease-in; /* Add transition for margin-left */
-            margin-left: 50%; /* Initially position the name at the center */
-        }
-
+        /* Homepage content */
         #content {
             position: absolute;
             top: 0;
@@ -59,215 +59,108 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white; /* Text color */
+            color: white;
             font-size: 24px;
             text-align: center;
         }
 
-        .indented-line {
-            padding-left: 20px; /* Adjust the value as needed */
-        }
-
-        body {
-            padding: 20px;
-            background-image: url(''); /* Set background image */
-            background-size: cover; /* Cover the entire viewport */
-            background-position: center; /* Center the background image */
-            background-repeat: no-repeat; /* Do not repeat the background image */
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: black;
-            padding: 10px;
+        /* Toolbar */
+        .toolbar {
+            background-color: #333;
             text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 999;
+            padding: 8px 16px;
+            margin: 0 25px;
         }
 
-        header p {
-            margin: 0;
-            padding: 0;
-            display: inline;
-            font-size: 20px;
-        }
-
-        header p::before {
-            content: "\2022"; /* Bullet character */
-            margin: 0 5px;
-        }
-
-        .name {
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: left;
-            margin-top: 65px; /* Adjust as needed */
-        }
-
-        .subname {
-            padding: 20px;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: left;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            margin-top: 60px;
-            margin-bottom: 20px;
-            border: 3px solid white; /* Add white border */
-        }
-
-        .bio {
-            max-width: 900px;
-            margin: 20px auto; /* Add margin for spacing */
-            padding: 20px;
-            border: 1px solid white; /* Add white border */
-            border-radius: 20px; /* Add border radius */
-            background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent black background */
-        }
-
-        .bio p {
-            margin-top: 0; /* Remove default margin for the first paragraph */
-        }
-
-        .bio p b {
-            color: yellow; /* Change color of <b> elements */
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-    @media (max-width: 768px) {
         .toolbar a {
             display: block;
-            color: white; /* Set link color to white */
-            background-color: #333; /* Dark background color */
-            text-align: center; /* Center-align the links */
-            padding: 8px 16px; /* Add padding to make the links clickable */
-            margin: 0 25px; /* Add spacing between links */
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            margin: 0 25px;
         }
 
-        .toolbar {
-            display: block;
-            margin-top: 10px; /* Add some spacing between the toolbar and the content */
-            background-color: #333; /* Dark background color */
-            text-align: center; /* Center-align the links */
-            padding: 8px 16px; /* Add padding to make the links clickable */
-            margin: 0 25px; /* Add spacing between links */
-        }
-    }
         .toolbar a:hover {
-            background-color: #555; /* Darker background color on hover */
+            background-color: #555;
         }
 
-        .top-right {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
+        /* Responsive styles */
         @media (max-width: 768px) {
-    .toolbar {
-        position: relative; /* Change the toolbar position to relative */
-        z-index: 1000; /* Ensure the toolbar appears above other content */
-        background-color: rgba(0, 0, 0, 0.8); /* Add some transparency to the toolbar */
-        padding: 10px; /* Add padding to the toolbar to prevent overlapping with content */
-    }
-}
+            .toolbar {
+                display: block;
+                position: relative;
+                z-index: 1000;
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 10px;
+                margin-top: 10px;
+            }
 
-    @media (max-width: 768px) {
-    .welcome-screen {
-        background-size: contain; /* Adjust background size to fit within the screen */
-        padding: 20px; /* Add padding to create space around the content */
-    }
+            .welcome-screen {
+                background-size: contain;
+                padding: 20px;
+            }
 
-    .name {
-        font-size: 20px; /* Decrease the font size of the name to fit smaller screens */
-    }
+            .name {
+                font-size: 20px;
+            }
 
-    .top-right {
-        width: 100px; /* Adjust the size of the image to fit smaller screens */
-        height: 100px;
-        margin-top: 20px; /* Add margin to create space between the image and text */
-    }
-}
-
+            .top-right {
+                width: 100px;
+                height: 100px;
+                margin-top: 20px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Welcome screen -->
+    <div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-text"></div>
+    </div>
 
-<div class="welcome-screen" id="welcomeScreen">
-        <div class="welcome-text">
-
+    <!-- Homepage content -->
+    <div id="content" class="welcome-hidden">
+        <div class="text-container">
+            <div class="name">Welcome!
+                <img src="images/183E403D-6CEF-401B-AE51-1CAE397106FF_1_105_c.jpeg" alt="!" class="top-right">
+            </div>
+                
+            <section class="bio">
+                <div class="subname">Robert Ortega, MS</div>
+                <ul>
+                    <li><b>About me</b>: First year MD-PhD trainee at Albert Einstein College of Medicine. Father and husband.</li>
+                    <li><b>Hometown</b>: El Paso, Texas</li>
+                    <li><b>Current scientific interests</b>: Statistical genetics, subgroups, and biomarkers.</li>
+                    <li><b>Current medical interests</b>: Neurology, psychiatry, internal medicine, pathology.</li>
+                    <li><b>Email</b>: roberto.ortega[at]einsteinmed.edu</li>
+                    <li><b>Education:</b></li>
+                    <div class="indented-line">
+                        <li>El Paso Community College: AA</li>
+                        <li>University of Texas at El Paso: MS (Mathematical Statistics), BS (Psychology/Statistics)</li>
+                        <li>Albert Einstein College of Medicine (MSTP): MD, PhD</li>
+                    </div>
+                </ul>
+            </section>
         </div>
     </div>
 
-    <div id="content" class="welcome-hidden">
-        <!-- Your homepage content goes here -->
-
-    </div>
+    <header>
+        <div class="toolbar">
+            <!-- Links -->
+            <a href="CV.html">CV</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+            <a href="photos.html">Life @ Einstein</a>
+            <a href="#">Work & Coding</a>
+            <a href="StudyMusic">Study Music</a>
+        </div>
+    </header>
 
     <script>
         // After 4 seconds, fade out the welcome screen and display the homepage
         setTimeout(function() {
             document.getElementById('welcomeScreen').classList.add('welcome-hidden');
             document.getElementById('content').classList.remove('welcome-hidden');
-            
         }, 4000);
     </script>
-
-    <header>
-        <div class="toolbar">
-        <!-- Links -->
-        <a href="CV.html">CV</a>
-        <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
-        <a href="photos.html">Life @ Einstein</a>
-        <a href="#">Work & Coding</a>
-        <a href="StudyMusic">Study Music</a>
-    </div>
-    </header>
-    
-    <div class="text-container">
-    <div class="name">Welcome!
-    <img src="images/183E403D-6CEF-401B-AE51-1CAE397106FF_1_105_c.jpeg" alt="!" class="top-right">
-    </div>
-        
-    <section class="bio">
-       <div class="subname">Robert Ortega, MS</div>
-        <ul>
-            <li><b>About me</b>: First year MD-PhD trainee at Albert Einstein College of Medicine. Father and husband.</li>
-            <li><b>Hometown</b>: El Paso, Texas
-            <li><b>Current scientific interests</b>: Statistical genetics, subgroups, and biomarkers.</li>
-            <li><b>Current medical interests</b>: Neurology, psychiatry, internal medicine, pathology.</li>
-            <li><b>Email</b>: roberto.ortega[at]einsteinmed.edu</li>
-            <p>
-            <li><b>Education:</b></li>
-            </p>
-        <div class="indented-line">
-            <li>El Paso Community College: AA</li>
-            <li>University of Texas at El Paso: MS (Mathematical Statistics), BS (Psychology/Statistics)</li>
-            <li>Albert Einstein College of Medicine (MSTP): MD, PhD</li>
-        </div>
-            
-        </ul>
-    </section>
 </body>
 </html>
