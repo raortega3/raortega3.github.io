@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Page</title>
     <style>
+                  
+    .music-video {
+        display: none; /* Hide the video player */
+    }
         body {
             margin: 0;
             padding: 0;
@@ -121,7 +125,7 @@
         <img src="images/183E403D-6CEF-401B-AE51-1CAE397106FF_1_105_c.jpeg" alt="!" class="top-right">
         <section class="bio">
             <div class="subname">Robert Ortega, MS</div>
-            <ul>
+                <ul>
                 <li><b>About me</b>: First year MD-PhD trainee at Albert Einstein College of Medicine. Father and husband.</li>
                 <li><b>Hometown</b>: El Paso, Texas</li>
                 <li><b>Current scientific interests</b>: Statistical genetics, subgroups, and biomarkers.</li>
@@ -134,6 +138,8 @@
                     <li>Albert Einstein College of Medicine (MSTP): MD, PhD</li>
                 </ul>
             </ul>
+
+<iframe class="music-video" width="560" height="315" src="https://music.youtube.com/playlist?list=PLj1iJ8-zGzm7I5qTukPgckiylGO6sJtIC" frameborder="0" allowfullscreen></iframe>
         </section>
     </div>
 
@@ -143,5 +149,16 @@
             document.getElementById('welcomeScreen').classList.add('welcome-hidden');
         }, 6000);
     </script>
+
+    <script>
+    // Get the video iframe
+    var video = document.querySelector('.music-video');
+
+    // Pause the video after 10 seconds
+    setTimeout(function() {
+        video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    }, 10000); // 10 seconds in milliseconds
+</script>
+    
 </body>
 </html>
