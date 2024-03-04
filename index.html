@@ -177,7 +177,6 @@
             display: none; /* Hide the toolbar by default */
         }
 
-
         /* Hover effect */
         .toolbar a:hover {
             background-color: #555; /* Darker background color on hover */
@@ -209,12 +208,12 @@
         setTimeout(function() {
             document.getElementById('welcomeScreen').classList.add('welcome-hidden');
             document.getElementById('content').classList.remove('welcome-hidden');
-            document.querySelector('.toolbar').classList.remove('welcome-hidden'); // Show the toolbar
+            
         }, 4000);
     </script>
 
     <header>
-                <div class="toolbar">
+        <div class="toolbar">
         <!-- Links -->
         <a href="CV.html">CV</a>
         <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
