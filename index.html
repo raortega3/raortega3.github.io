@@ -215,6 +215,14 @@
         }, 4000);
     </script>
 
+    <script>
+    // After 4 seconds, fade out the welcome screen and display the homepage
+    setTimeout(function() {
+        document.getElementById('welcomeScreen').classList.add('welcome-hidden');
+        document.getElementById('content').classList.remove('welcome-hidden');
+        document.querySelector('header .toolbar').classList.remove('welcome-hidden'); // Show the toolbar
+    }, 4000);
+</script>
     
     <header>
                 <div class="toolbar">
