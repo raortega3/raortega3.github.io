@@ -6,6 +6,50 @@ User
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Page</title>
     <style>
+
+        .welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/00B141CD-1564-4E74-9A70-6E2F10A10E21_1_105_c.jpeg'); /* Specify your image URL */
+            background-size: cover; /* Cover the entire screen */
+            background-position: center; /* Center the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white; /* Text color */
+            font-size: 24px;
+            text-align: center;
+            opacity: 1;
+            animation: fadeOut 4s forwards; /* Fade out animation */
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* Hide the welcome screen after animation */
+        .welcome-hidden {
+            display: none;
+        }
+
+        #content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white; /* Text color */
+            font-size: 24px;
+            text-align: center;
+        }
+        
         .indented-line {
             padding-left: 20px; /* Adjust the value as needed */
         }
@@ -127,6 +171,28 @@ User
     </style>
 </head>
 <body>
+
+<div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-text">
+            <p>Robert Ortega: MD-PhD Student</p>
+            <p>Albert Einstein College of Medicine</p>
+        </div>
+    </div>
+
+    <div id="content" class="welcome-hidden">
+        <!-- Your homepage content goes here -->
+
+    </div>
+
+    <script>
+        // After 4 seconds, fade out the welcome screen and display the homepage
+        setTimeout(function() {
+            document.getElementById('welcomeScreen').classList.add('welcome-hidden');
+            document.getElementById('content').classList.remove('welcome-hidden');
+        }, 4000);
+    </script>
+
+    
     <header>
                 <div class="toolbar">
         <!-- Links -->
