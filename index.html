@@ -5,156 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Page</title>
     <style>
-        .indented-line {
-            padding-left: 20px; /* Adjust the value as needed */
-        }
-        body {
-            padding: 20px;
-            background-image: url(''); /* Set background image */
-            background-size: cover; /* Cover the entire viewport */
-            background-position: center; /* Center the background image */
-            background-repeat: no-repeat; /* Do not repeat the background image */
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background-color: black;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 999;
-        }
-        header p {
-            margin: 0;
-            padding: 0;
-            display: inline;
-            font-size: 20px;
-        }
-        header p::before {
-            content: "\2022"; /* Bullet character */
-            margin: 0 5px;
-        }
+        /* Your existing CSS styles */
+
         .name {
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
             text-align: left;
-            margin-top: 65px; /* Adjust as needed */
+            margin-top: 85px; /* Adjusted margin to create space between toolbar and name */
         }
+        
         .subname {
-            padding: 20px;
+            padding: 10px 20px; /* Adjusted padding for subname */
             font-size: 16px;
             font-weight: bold;
             text-align: left;
+            margin: 0; /* Reset margin to ensure no extra space */
         }
-                /* Positioning */
-       
-        img {
-            display: block;
-            margin: 0 auto;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            margin-top: 60px;
-            margin-bottom: 20px;
-            border: 3px solid white; /* Add white border */
-        }
-        .bio {
-            max-width: 900px;
-            margin: 20px auto; /* Add margin for spacing */
-            padding: 20px;
-            border: 1px solid white; /* Add white border */
-            border-radius: 20px; /* Add border radius */
-            background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent black background */
-        }
-        .bio p {
-            margin-top: 0; /* Remove default margin for the first paragraph */
-        }
-        .bio p b {
-            color: yellow; /* Change color of <b> elements */
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Styling links */
-        a {
-            color: purple; /* Set link color to purple */
-            text-decoration: none; /* Remove default underline */
-        }
-
-        a:hover {
-            text-decoration: underline; /* Add underline on hover */
-        }
-
-                /* Toolbar container styles */
-        .toolbar {
-            background-color: #333; /* Dark background color */
-            padding: 10px; /* Add some padding around the links */
-            text-align: center; /* Center-align the links */
-        }
-
-        /* Link styles */
-        .toolbar a {
-            color: white; /* White text color */
-            text-decoration: none; /* Remove underline */
-            padding: 8px 16px; /* Add padding to make the links clickable */
-            margin: 0 10px; /* Add spacing between links */
-        }
-
-        /* Hover effect */
-        .toolbar a:hover {
-            background-color: #555; /* Darker background color on hover */
-        }
-        
     </style>
 </head>
 <body>
     <header>
-                <div class="toolbar">
-        <!-- Links -->
-        <a href="cv.html">CV</a>
-        <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
-        <a href="photos.html">Life @ Einstein</a>
-        <a href="#">Work & Coding</a>
-        <a href="StudyMusic">Study Music</a>
-    </div>
-    </header>
-    
-    <div class="text-container">
-    <div class="name">Robert Ortega
-    <div class="subname">MD-PhD trainee, Albert Einstein College of Medicine</div>
-    <img src="images/183E403D-6CEF-401B-AE51-1CAE397106FF_1_105_c.jpeg" alt="!">
-    </div>
-        
-    <section class="bio">
-        <p>Hello and welcome!</p>
-
-        <ul>
-            <li><b>About me</b>: First year MD-PhD trainee at Albert Einstein College of Medicine.</li>
-            <li><b>Current scientific interests</b>: Statistical genetics, subgroups, and biomarkers.</li>
-            <li><b>Current medical interests</b>: Neurology, psychiatry, internal medicine, pathology.</li>
-            <li><b>Email</b>: roberto.ortega[at]einsteinmed.edu</li>
-            <p>
-            <li><b>Education:</b></li>
-            </p>
-        <div class="indented-line">
-            <li>El Paso Community College: AA</li>
-            <li>University of Texas at El Paso (BS, MS: Mathematical Statistics)</li>
-            <li>Albert Einstein College of Medicine (MSTP): MD, PhD</li>
+        <div class="toolbar">
+            <!-- Links -->
+            <a href="cv.html">CV</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+            <a href="photos.html">Life @ Einstein</a>
+            <a href="#">Work & Coding</a>
+            <a href="StudyMusic">Study Music</a>
         </div>
-            
-        </ul>
-    </section>
+    </header>
+
+    <!-- Name and subname below the toolbar -->
+    <div class="name">Robert Ortega</div>
+    <div class="subname">MD-PhD trainee, Albert Einstein College of Medicine</div>
+
+    <!-- Rest of your HTML content -->
+    <div class="text-container">
+        <!-- Remaining content -->
+    </div>
 </body>
 </html>
