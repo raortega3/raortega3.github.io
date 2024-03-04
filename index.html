@@ -33,10 +33,6 @@
             66.66%, 100% { opacity: 0; } /* Fade out for the remaining duration */
         }
 
-        .toolbar.welcome-hidden {
-            display: none; /* Hide the toolbar when the welcome screen is displayed */
-        }
-
         /* Hide the welcome screen after animation */
         .welcome-hidden {
             display: none;
@@ -165,7 +161,21 @@
             background-color: #333; /* Dark background color */
             padding: 10px; /* Add some padding around the links */
             text-align: center; /* Center-align the links */
+            display: none; /* Hide the toolbar by default */
         }
+
+
+        .toolbar {
+    background-color: #333; /* Dark background color */
+    padding: 10px; /* Add some padding around the links */
+    text-align: center; /* Center-align the links */
+    
+}
+
+/* Show the toolbar when the welcome screen is hidden */
+#welcomeScreen.welcome-hidden + header .toolbar {
+    display: block;
+}
 
         /* Link styles */
         .toolbar a {
