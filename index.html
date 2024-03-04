@@ -6,54 +6,51 @@
     <title>My Personal Page</title>
     <style>
 
-welcome-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("images/00B141CD-1564-4E74-9A70-6E2F10A10E21_1_105_c.jpeg");
-    background-size: contain; /* Cover the entire screen */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat;
-    background-color: black; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: left; /* Align the name to the left */
-    margin-top: 65px; /* Adjust as needed */
-    color: white; /* Text color */
-    text-align: center;
-    opacity: 1;
-    animation: fadeOut 10s forwards; /* Apply the fadeOut animation */
-    transition: opacity 4s ease-in;
-}
-
-        @keyframes fadeInHoldFadeOut {
-            0%, 33.33% { opacity: 1; } /* Fade in and hold for 4 seconds (33.33% of the animation duration) */
-            66.66%, 100% { opacity: 0; } /* Fade out for the remaining duration */
+        .welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("images/00B141CD-1564-4E74-9A70-6E2F10A10E21_1_105_c.jpeg");
+            background-size: contain; /* Cover the entire screen */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat;
+            background-color: black; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left; /* Align the name to the left */
+            margin-top: 65px; /* Adjust as needed */
+            color: white; /* Text color */
+            text-align: center;
+            opacity: 1;
+            animation: fadeOut 10s forwards; /* Apply the fadeOut animation */
         }
 
-       
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
         /* Hide the welcome screen after animation */
         .welcome-hidden {
             display: none;
         }
 
-.name {
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: left; /* Align the name to the left */
-    margin-top: 65px; /* Adjust as needed */
-    transition: margin-left 4s ease-in; /* Add transition for margin-left */
-    margin-left: 50%; /* Initially position the name at the center */
-}
+        .name {
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left; /* Align the name to the left */
+            margin-top: 65px; /* Adjust as needed */
+            transition: margin-left 4s ease-in; /* Add transition for margin-left */
+            margin-left: 50%; /* Initially position the name at the center */
+        }
 
-        
         #content {
             position: absolute;
             top: 0;
@@ -82,7 +79,6 @@ welcome-screen {
             color: white;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
             line-height: 1.6;
         }
 
@@ -103,7 +99,6 @@ welcome-screen {
             font-size: 20px;
         }
 
-
         header p::before {
             content: "\2022"; /* Bullet character */
             margin: 0 5px;
@@ -123,8 +118,6 @@ welcome-screen {
             font-weight: bold;
             text-align: left;
         }
-
-        /* Positioning */
 
         img {
             display: block;
@@ -163,12 +156,10 @@ welcome-screen {
             text-decoration: underline;
         }
 
-        /* Styling links */
         .toolbar a {
             color: white; /* Set link color to white */
         }
 
-        /* Toolbar container styles */
         .toolbar {
             background-color: #333; /* Dark background color */
             text-align: center; /* Center-align the links */
@@ -176,12 +167,6 @@ welcome-screen {
             margin: 0 10px; /* Add spacing between links */
         }
 
-/* Show the toolbar when the welcome screen is hidden */
-.welcome-hidden + header .toolbar {
-    display: block;
-}
-        
-        /* Hover effect */
         .toolbar a:hover {
             background-color: #555; /* Darker background color on hover */
         }
