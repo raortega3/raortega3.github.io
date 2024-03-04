@@ -191,6 +191,15 @@ background-image: url("images/00B141CD-1564-4E74-9A70-6E2F10A10E21_1_105_c.jpeg"
 
     </div>
 
+      <script>
+ // After 4 seconds, fade out the welcome screen and display the homepage
+    setTimeout(function() {
+        document.getElementById('welcomeScreen').classList.add('welcome-hidden');
+        document.getElementById('content').classList.remove('welcome-hidden');
+        document.querySelector('.toolbar').classList.remove('welcome-hidden'); // Show the toolbar
+    }, 4000);
+</script>
+    
     <script>
         // After 4 seconds, fade out the welcome screen and display the homepage
         setTimeout(function() {
