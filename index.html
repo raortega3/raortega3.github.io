@@ -139,9 +139,10 @@
                 </ul>
             </ul>
 
-<audio controls autoplay currentTime="0" id="myAudio">
-  <source src="files/03 Haru.m4a" type="audio/mp4">
-</audio>    
+
+<audio controls autoplay id="myAudio">
+                <source src="files/03 Haru.m4a" type="audio/mp4">
+            </audio>    
         </section>
     </div>
 
@@ -150,14 +151,13 @@
         setTimeout(function() {
             document.getElementById('welcomeScreen').classList.add('welcome-hidden');
         }, 6000);
-    </script>
 
-<script>
-  var audio = document.getElementById("myAudio");
-  setTimeout(function() {
-    audio.pause();
-  }, 10000); // 10 seconds in milliseconds
-</script>
+        // After 10 seconds, pause the audio
+        setTimeout(function() {
+            var audio = document.getElementById("myAudio");
+            audio.pause();
+        }, 10000);
+    </script>
     
 </body>
 </html>
