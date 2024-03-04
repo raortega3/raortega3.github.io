@@ -27,16 +27,16 @@ background-image: url("images/00B141CD-1564-4E74-9A70-6E2F10A10E21_1_105_c.jpeg"
             opacity: 1;
             animation: fadeOut 10s forwards; /* Fade out animation */
             transition: opacity 4s ease-in;
-            .toolbar.welcome-hidden {
-    display: none; /* Hide the toolbar when the welcome screen is displayed */
-}
         }
 
      @keyframes fadeInHoldFadeOut {
     0%, 33.33% { opacity: 1; } /* Fade in and hold for 4 seconds (33.33% of the animation duration) */
     66.66%, 100% { opacity: 0; } /* Fade out for the remaining duration */
 }
-
+.toolbar.welcome-hidden {
+    display: none; /* Hide the toolbar when the welcome screen is displayed */
+}
+        
         /* Hide the welcome screen after animation */
         .welcome-hidden {
             display: none;
