@@ -87,6 +87,7 @@
             font-size: 20px;
         }
 
+
         header p::before {
             content: "\2022"; /* Bullet character */
             margin: 0 5px;
@@ -160,10 +161,9 @@
             display: none; /* Hide the toolbar by default */
         }
 
-        /* Show the toolbar when the welcome screen is hidden */
-        #welcomeScreen.welcome-hidden + header .toolbar {
-            display: block;
-        }
+        .welcome-hidden + header .toolbar {
+    display: block;
+}
 
         /* Hover effect */
         .toolbar a:hover {
