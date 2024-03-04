@@ -173,9 +173,13 @@
             background-color: #333; /* Dark background color */
             padding: 10px; /* Add some padding around the links */
             text-align: center; /* Center-align the links */
-            display: none; /* Hide the toolbar by default */
         }
 
+/* Show the toolbar when the welcome screen is hidden */
+.welcome-hidden + header .toolbar {
+    display: block;
+}
+        
         /* Hover effect */
         .toolbar a:hover {
             background-color: #555; /* Darker background color on hover */
