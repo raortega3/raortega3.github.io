@@ -184,6 +184,15 @@
             right: 20px;
         }
 
+        @media (max-width: 768px) {
+    .toolbar {
+        position: relative; /* Change the toolbar position to relative */
+        z-index: 1000; /* Ensure the toolbar appears above other content */
+        background-color: rgba(0, 0, 0, 0.8); /* Add some transparency to the toolbar */
+        padding: 10px; /* Add padding to the toolbar to prevent overlapping with content */
+    }
+}
+
     @media (max-width: 768px) {
     .welcome-screen {
         background-size: contain; /* Adjust background size to fit within the screen */
