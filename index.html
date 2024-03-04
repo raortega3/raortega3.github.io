@@ -139,7 +139,9 @@
                 </ul>
             </ul>
 
-<iframe class="music-video" width="560" height="315" src="https://music.youtube.com/watch?v=lurD69Bl5Tc&si=7LvnCzomi1n62mvL" frameborder="0" allowfullscreen></iframe>
+<audio controls autoplay currentTime="0" id="myAudio">
+  <source src="files/03 Haru.m4a" type="audio/mpeg">
+</audio>        
         </section>
     </div>
 
@@ -150,14 +152,11 @@
         }, 6000);
     </script>
 
-    <script>
-    // Get the video iframe
-    var video = document.querySelector('.music-video');
-
-    // Pause the video after 10 seconds
-    setTimeout(function() {
-        video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-    }, 10000); // 10 seconds in milliseconds
+<script>
+  var audio = document.getElementById("myAudio");
+  setTimeout(function() {
+    audio.pause();
+  }, 10000); // 10 seconds in milliseconds
 </script>
     
 </body>
