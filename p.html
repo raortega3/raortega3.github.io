@@ -14,9 +14,11 @@
 
 
 .gallery {
+  width: 90%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the gallery horizontally */
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four equal-width columns */
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minimum width as needed */
+  gap: 20px; /* Adjust the gap between images */
 }
 
     .thumbnail {
