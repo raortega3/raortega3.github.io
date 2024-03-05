@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Photo Gallery</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+    <!-- Replace these image URLs with the URLs of your own photos -->
+    <img src="https://via.placeholder.com/200" alt="Photo 1">
+    <img src="https://via.placeholder.com/200" alt="Photo 2">
+    <img src="https://via.placeholder.com/200" alt="Photo 3">
+    <!-- Add more <img> elements for additional photos -->
+</div>
+
+</body>
+</html>
