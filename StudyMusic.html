@@ -16,11 +16,11 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         background-color: white; /* White circle */
-        animation: fadeAnimation 5s forwards; /* 5 seconds fade animation */
+        animation: fadeAnimation 10s forwards; /* 5 seconds fade animation */
     }
 
     @keyframes fadeAnimation {
@@ -30,6 +30,18 @@
         100% {
             opacity: 0; /* Fade out to completely transparent */
         }
+    }
+
+    h1, a {
+        color: white;
+        text-decoration: none;
+        margin: 10px 0; /* Adjust margin to maintain spacing */
+        position: relative;
+        z-index: 1; /* Ensure links are above the background */
+    }
+
+    a:hover {
+        text-decoration: underline; /* Underline link on hover */
     }
 </style>
 </head>
