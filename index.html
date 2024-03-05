@@ -70,11 +70,12 @@
         }
 
         .content img {
-            display: block;
-            margin: 0 auto;
-            width: 230px; /* Adjust as needed */
-            height: 230px; /* Adjust as needed */
-            object-fit: contain;
+          display: block;
+    margin: 0 auto;
+    max-width: 25%; /* Ensure the image doesn't exceed the container's width */
+    max-height: 25%; /* Ensure the image doesn't exceed the container's height */
+    width: auto; /* Allow the width to adjust automatically based on the height */
+    height: auto; /* Allow the height to adjust automatically based on the width */
         }
 
         .content .bio {
