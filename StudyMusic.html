@@ -3,22 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Einstein Life</title>
+<title>Chaos Art</title>
 <style>
     body {
-        top: 0;
-        left: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .chaos {
+        position: absolute;
         width: 100%;
         height: 100%;
-        background-color: black; /* Set background color to black */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white; /* Text color */
-        font-family: Arial, sans-serif; /* Font family */
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
+        background: linear-gradient(to bottom, #4CAF50, #00BCD4, #FFEB3B, #FF5722); /* Change colors as desired */
+        animation: chaosAnimation 20s infinite linear;
+    }
+
+    @keyframes chaosAnimation {
+        0% {
+            transform: scale(1) rotate(0deg);
+        }
+        100% {
+            transform: scale(1.2) rotate(360deg);
+        }
     }
 
     h1, a {
@@ -32,11 +39,15 @@
     }
 </style>
 </head>
-<body>
 
+</head>
+<body>
 <h1>Focus Music</h1>
 <a href="https://music.youtube.com/playlist?list=PLj1iJ8-zGzm7I5qTukPgckiylGO6sJtIC&si=CJ_gXtG4GlrLtPDq">Peaceful Ambient</a>
 <a href="https://music.youtube.com/playlist?list=PLj1iJ8-zGzm6ZcZMybATAjDrNQ0cdh39h&si=CiOeDSQVqpjloQFu">Dark Ambient</a>
 
+<div class="chaos"></div>
+
 </body>
 </html>
+
