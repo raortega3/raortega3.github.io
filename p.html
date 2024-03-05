@@ -179,7 +179,6 @@
 <div class="thumbnail-container">
     <img src="images/5FC8FA4F-F43C-4FED-8B02-A874B572B046_1_105_c.jpeg" alt="Photo 2">
  </div> 
-  
 
 </div>
 
@@ -190,14 +189,17 @@
 
 <script>
 function openModal(imgSrc) {
-    document.getElementById('myModal').style.display = "block";
-    document.getElementById('modalImg').src = imgSrc;
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById('modalImg');
+    modal.style.display = "block";
+    modalImg.src = imgSrc;
 }
 
 function closeModal() {
     document.getElementById('myModal').style.display = "none";
 }
 </script>
+
 
 </body>
 </html>
