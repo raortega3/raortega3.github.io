@@ -5,78 +5,77 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Photo Gallery</title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f0f0;
-    }
-
-
-.gallery {
-  width: 90%; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the gallery horizontally */
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minimum width as needed */
-  gap: 20px; /* Adjust the gap between images */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
-    .thumbnail {
-        width: 25%;
-        max-width: 45px; /* Adjust maximum width of thumbnails */
-        height: auto;
-        border-radius: 5px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease;
-        cursor: pointer;
-    }
+.gallery {
+    width: 90%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the gallery horizontally */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr)); /* Adjust the minimum width as needed */
+    gap: 20px; /* Adjust the gap between images */
+}
 
-    .thumbnail:hover {
-        transform: scale(1.05);
-    }
+.thumbnail {
+    width: 100%;
+    max-width: 200px; /* Adjust maximum width of thumbnails */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
 
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        padding-top: 100px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0,0.9);
-    }
+.thumbnail:hover {
+    transform: scale(1.05);
+}
 
-    .modal-content {
-        margin: auto;
-        display: block;
-        max-width: 90%; /* Adjust modal width as needed */
-        max-height: 90%; /* Adjust modal height as needed */
-    }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
 
-    .modal-content img {
-        width: 100%;
-        height: auto;
-    }
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Adjust modal width as needed */
+    max-height: 90%; /* Adjust modal height as needed */
+}
 
-    .close {
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        color: #f1f1f1;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
 
-    .close:hover,
-    .close:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
-    }
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 </style>
 </head>
 <body>
