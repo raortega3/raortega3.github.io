@@ -16,38 +16,41 @@
         width: 90%;
         margin: 0 auto;
         display: grid;
-    grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
     }
 
-.thumbnail-container {
-    position: relative;
-    width: 100%; /* Adjust the width of the container */
-    height: 0;
-    padding-bottom: 100%; /* Set the height based on the width to maintain aspect ratio */
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
+    .thumbnail-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%; /* Set the height based on the width to maintain aspect ratio */
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
 
     .thumbnail {
         width: 100%;
-        height: 100%;
-        object-fit: contain;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 10%; /* Adjust as needed */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-}
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 10%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
 
     .modal-content {
         margin: auto;
@@ -82,10 +85,9 @@
 <body>
 
 <div class="gallery">
-    <div class="thumbnail-container">
+        <div class="thumbnail-container">
         <img src="images/7DF5AB4C-AEC7-4B6F-8579-77A6D8F1C0FF_1_105_c.jpeg" alt="Photo 2" class="thumbnail">
     </div>
-
 <div class="thumbnail-container">
     <img src="images/60FBCE67-C957-49EE-9B1C-6851CDFC3678_1_105_c.jpeg" alt="Photo 3">
   </div>
@@ -179,7 +181,6 @@
 <div class="thumbnail-container">
     <img src="images/5FC8FA4F-F43C-4FED-8B02-A874B572B046_1_105_c.jpeg" alt="Photo 2">
  </div> 
-
 </div>
 
 <div id="myModal" class="modal">
@@ -199,7 +200,6 @@ function closeModal() {
     document.getElementById('myModal').style.display = "none";
 }
 </script>
-
 
 </body>
 </html>
