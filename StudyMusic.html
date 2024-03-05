@@ -15,16 +15,17 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to bottom, black, white); /* Black and white color scale */
-        animation: chaosAnimation 5s forwards; /* 5 seconds animation */
+        background: white; /* Start with a white background */
+        animation: fadeAnimation 10s forwards; /* 5 seconds fade animation */
     }
 
-    @keyframes chaosAnimation {
+    @keyframes fadeAnimation {
         0% {
-            transform: scale(1);
+            opacity: 1; /* Start with full opacity */
         }
         100% {
-            transform: scale(1.2);
+            opacity: 0; /* Fade out to completely transparent */
+            background: black; /* End with a black background */
         }
     }
 
@@ -32,6 +33,8 @@
         color: white;
         text-decoration: none;
         margin: 10px; /* Add margin between elements */
+        position: relative;
+        z-index: 1; /* Ensure links are above the background */
     }
 
     a:hover {
