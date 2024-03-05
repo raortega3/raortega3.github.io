@@ -22,9 +22,11 @@
     @keyframes fadeAnimation {
         0% {
             opacity: 1; /* Start with full opacity */
+            background: white; /* Start with white background */
         }
         100% {
             opacity: 0; /* Fade out to completely transparent */
+            background: black; /* End with black background */
         }
     }
 
@@ -42,7 +44,7 @@
 
     /* Ensure links remain visible even after the background fades out */
     h1, a {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 </style>
 </head>
