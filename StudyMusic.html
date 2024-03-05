@@ -8,7 +8,7 @@
     body {
         margin: 0;
         padding: 0;
-        /*overflow: hidden;*/
+        overflow: hidden;
     }
 
     .chaos {
@@ -16,16 +16,16 @@
         width: 100%;
         height: 100%;
         background: white; /* Start with a white background */
-        animation: fadeAnimation 10s forwards; /* 5 seconds fade animation */
+        animation: fadeAnimation 5s forwards; /* 5 seconds fade animation */
     }
 
     @keyframes fadeAnimation {
         0% {
-            opacity: 0; /* Start with full opacity */
+            opacity: 1; /* Start with full opacity */
             background: white; /* Start with white background */
         }
         100% {
-            opacity: 1; /* Fade out to completely transparent */
+            opacity: 0; /* Fade out to completely transparent */
             background: black; /* End with black background */
         }
     }
@@ -33,7 +33,7 @@
     h1, a {
         color: white;
         text-decoration: none;
-        margin: 10px 0; /* Add margin between elements */
+        margin: 20px 0; /* Adjust margin to maintain spacing */
         position: relative;
         z-index: 1; /* Ensure links are above the background */
     }
@@ -44,15 +44,15 @@
 
     /* Ensure links remain visible even after the background fades out */
     h1, a {
-        text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 </style>
 </head>
 
 <body>
-<div class="chaos"></div>
 <h1>Focus Music</h1>
-<a href="https://music.youtube.com/playlist?list=PLj1iJ8-zGzm7I5qTukPgckiylGO6sJtIC&si=CJ_gXtG4GlrLtPDq">Peaceful Ambient</a>
+    <div class="chaos"></div>
+<a href="https://music.youtube.com/playlist?list=PLj1iJ8-zGzm7I5qTukPgckiylGO6sJtIC&si=CJ_gXtG4GlrLtPDq">Peaceful Ambient</a><br>
 <a href="https://music.youtube.com/playlist?list=PLj1iJ8-zGzm6ZcZMybATAjDrNQ0cdh39h&si=CiOeDSQVqpjloQFu">Dark Ambient</a>
 
 </body>
