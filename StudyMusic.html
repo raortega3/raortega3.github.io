@@ -12,6 +12,14 @@
         background-color: black; /* Start with a black background */
     }
 
+    <style>
+        /* Hide the video player */
+        .video-container {
+            display: none;
+        }
+    </style>
+    
+
     .circle {
         position: absolute;
         top: 50%;
@@ -47,8 +55,16 @@
 </head>
 
 <body>
+
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DJVnoYGPdNs" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Audio player (still plays the audio from the video) -->
+    <audio controls autoplay>
+        <source src="https://www.youtube.com/watch?v=DJVnoYGPdNs" type="audio/mp3">
+    </audio>
 <div class="circle"></div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DJVnoYGPdNs?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h1></h1>
 <a href="https://music.youtube.com/playlist?list=PLj1iJ8-zGzm7I5qTukPgckiylGO6sJtIC&si=CJ_gXtG4GlrLtPDq">Peaceful Ambient</a><br>
 <a href="https://music.youtube.com/playlist?list=PLj1iJ8-zGzm6ZcZMybATAjDrNQ0cdh39h&si=CiOeDSQVqpjloQFu">Dark Ambient</a>
