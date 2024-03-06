@@ -52,12 +52,12 @@ header a {
 }
 
 .bio img {
-    width: 100%; /* Adjust for mobile */
-    height: auto;
-    margin-right: auto; /* Center the image horizontally */
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    height: auto; /* Allow the height to adjust automatically based on the width */
     display: block; /* Ensure proper spacing */
+    margin: 0 auto; /* Center the image horizontally */
 }
-
+        
 .bio p {
     margin-top: 0;
     font-size: 14px; /* Adjust size for mobile */
@@ -71,6 +71,14 @@ header a {
     height: auto;
 }
 
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .content img {
+        width: 150px; /* Adjust width for smaller screens */
+        height: auto; /* Ensure height adjusts accordingly */
+    }
+}
+        
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     header a {
