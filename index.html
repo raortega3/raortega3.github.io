@@ -180,6 +180,8 @@ max-width: 25%; /* Ensure the image does not exceed the container width */
     margin: 0; /* Remove any default margins */
     padding: 0; /* Remove any default padding */
     z-index: 9999; /* Ensure it's above other elements */
+    transition: opacity 1s ease-in-out; /* Apply transition effect to opacity property */
+
 }
 
 #mainHeader {
@@ -253,6 +255,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 7000);
 });
 </script>    
+ 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var name = document.querySelector('.name');
+    name.style.opacity = '1'; // Set opacity to 1 to trigger fade-in effect
+});
+</script> 
     
 </body>
 </html>
