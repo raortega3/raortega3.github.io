@@ -19,10 +19,9 @@ body {
     text-align: center;
 }
 
-/* Header adjustments */
-header {
+.header-below {
     position: fixed;
-    top: 75;
+    top: 75px; /* Adjust based on the height of the name header */
     left: 0;
     width: 100%;
     background-color: white;
@@ -207,17 +206,22 @@ max-width: 25%; /* Ensure the image does not exceed the container width */
     </div>
 
     <div class="content">
-        <header id="mainHeader"> <!-- Give an ID to the header -->
-    <nav>
-        <b><p class="name">Robert Ortega, MS</p></b>
-        <a href="CV.html">CV</a><br>
+
+<body>
+    <div class="name">Robert Ortega, MS</div>
+    <div class="header-below">
+       <a href="CV.html">CV</a><br>
         <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a><br>
         <a href="photos.html">Life @ Einstein</a><br>
         <a href="#">Work & Coding</a><br>
         <a href="StudyMusic.html">Study Music</a><br>
         <a href="p.html">My Photography</a>
-    </nav>
-</header>
+    </div>
+    <div class="content">
+        <!-- Rest of your content -->
+    </div>
+</body>
+       
     <section class="bio">
         <img src="images/5E56ED9E-2616-4950-9A30-C7FF45DA4356_1_105_c.jpeg" alt="!" class="top-right">
         <ul>
