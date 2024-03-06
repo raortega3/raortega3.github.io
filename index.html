@@ -64,14 +64,37 @@
             100% { opacity: 0; }
         }
 
- 
-        .content {
-             display: flex;
+
+
+.content {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
 }
 
-.text {
-  flex: 1; /* Takes up remaining space */
+.bio {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
+.bio img {
+    float: right; /* Float the image to the right */
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Allow the height to adjust automatically based on the width */
+    margin-left: 20px; /* Add some space between the text and the image */
+}
+
+.bio p {
+    margin-top: 0;
+}
+
+.bio p b {
+    color: yellow;
+}
+
 
 .image {
   margin-left: 20px; /* Adjust as needed */
@@ -135,35 +158,35 @@
     </header>
 
     <div class="content">
-        <section class="bio">
-            <div class="subname"></div>
-            <B><p style="color: #40E0D0;">Robert Ortega, MS</p></B>
-               <img src="images/5E56ED9E-2616-4950-9A30-C7FF45DA4356_1_105_c.jpeg" alt="!" class="top-right">
-                <li><b>About me</b>: First year MD-PhD trainee at Albert Einstein College of Medicine. Father and husband.</li>
-                <li><b>Hometown</b>: El Paso, Texas</li>
-                <br>
-                <li><b>Education:</b></li>
-                <ul>
-                    <li>El Paso Community College: AA (General studies)</li>
-                    <li>University of Texas at El Paso: BS (Psychology/Statistics), MS (Mathematical Statistics)</li>
-                    <li>Albert Einstein College of Medicine (MSTP): MD, PhD</li>
-                </ul>
-                <li><b>Current Interests:</b></li>
-                <ul>
+    <section class="bio">
+        <div class="subname"></div>
+        <B><p style="color: #40E0D0;">Robert Ortega, MS</p></B>
+        <img src="images/5E56ED9E-2616-4950-9A30-C7FF45DA4356_1_105_c.jpeg" alt="!" class="top-right">
+        <ul>
+            <li><b>About me</b>: First year MD-PhD trainee at Albert Einstein College of Medicine. Father and husband.</li>
+            <li><b>Hometown</b>: El Paso, Texas</li>
+            <br>
+            <li><b>Education:</b></li>
+            <ul>
+                <li>El Paso Community College: AA (General studies)</li>
+                <li>University of Texas at El Paso: BS (Psychology/Statistics), MS (Mathematical Statistics)</li>
+                <li>Albert Einstein College of Medicine (MSTP): MD, PhD</li>
+            </ul>
+            <li><b>Current Interests:</b></li>
+            <ul>
                 <li><b>Scientific queries</b>: Statistical genetics, phenotypic subgroups/variability, and prodromal biomarkers.</li>
                 <li><b>Medical specialties</b>: Neurology, psychiatry, internal medicine, pathology.</li>
                 <li><b>Leisure: </b>Reading non-fiction, running, fishing, the outdoors, photography, summertime</li>
-                </ul>
-                <br>
-                <li><b>Email</b>: roberto.ortega[at]einsteinmed.edu</li>
             </ul>
+            <br>
+            <li><b>Email</b>: roberto.ortega[at]einsteinmed.edu</li>
+        </ul>
+        <audio autoplay id="myAudio">
+            <source src="files/03-Haru.mp3">
+        </audio>    
+    </section>
+</div>
 
-
-            <audio autoplay id="myAudio">
-                <source src="files/03-Haru.mp3">
-            </audio>    
-        </section>
-    </div>
 
     <script>
         // After 6 seconds, fade out the welcome screen
