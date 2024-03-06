@@ -13,33 +13,75 @@
 
 body {
     margin: 0;
-    padding: 75;
+    padding: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(to top, rgba(209, 178, 140, 0.5), rgba(255, 255, 255, 0.0)) no-repeat center bottom fixed, url('images/3584F86F-0B73-4EBB-AA0C-62A158CA4876_1_105_c.jpeg') no-repeat center bottom fixed; 
-    background-size: cover; /* Ensure the image covers the entire background */
+    background-size: cover;
     color: black;
     text-align: center;
 }
-        
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: white;
-            padding: 25px;
-            z-index: 999;
-        }
+/* Header adjustments */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    z-index: 999;
+}
 
-        header a {
-            color: #40E0D0;
-            text-decoration: none;
-            margin: 0 10px;
-            margin: 0 15px; /* Adjust the margin for spacing */
-    font-weight: bold; /* Make the text bold */
-    letter-spacing: 1px; /* Add some letter spacing for extra spacing */
-        }
+/* Navigation link adjustments */
+header a {
+    color: #40E0D0;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 16px; /* Adjust size for mobile */
+}
+
+/* Bio section adjustments */
+.bio {
+    max-width: 90%; /* Adjust for mobile */
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #40E0D0;
+    border-radius: 20px;
+    background-color: white;
+    text-align: left;
+}
+
+.bio img {
+    width: 100%; /* Adjust for mobile */
+    height: auto;
+    margin: 0 auto 20px; /* Center image and add space */
+}
+
+.bio p {
+    margin-top: 0;
+    font-size: 14px; /* Adjust size for mobile */
+}
+
+/* Responsive adjustments for images */
+.content img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    header a {
+        font-size: 14px; /* Adjust size for smaller screens */
+    }
+
+    .bio {
+        padding: 10px;
+    }
+}
 
         header a:hover {
             text-decoration: underline;
@@ -80,25 +122,8 @@ body {
     justify-content: center; /* Center the content horizontally */
 }
 
-.bio {
-    max-width: 2500px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid white;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
-.bio img {
-    float: right; /* Float the image to the right */
-    width: 250px; /* Adjust the width as needed */
-    height: auto; /* Allow the height to adjust automatically based on the width */
-    margin-left: 20px; /* Add some space between the text and the image */
-}
 
-.bio p {
-    margin-top: 0;
-}
 
 .bio p b {
     color: yellow;
@@ -112,14 +137,6 @@ body {
             text-align: left;
         }
 
-        .content img {
-          display: block;
-    margin: 0 auto;
-    max-width: 15%; /* Ensure the image doesn't exceed the container's width */
-    max-height: 15%; /* Ensure the image doesn't exceed the container's height */
-    width: auto; /* Allow the width to adjust automatically based on the height */
-    height: auto; /* Allow the height to adjust automatically based on the width */
-        }
 
     
         .content .bio {
