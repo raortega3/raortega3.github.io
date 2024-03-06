@@ -143,6 +143,26 @@
     font-size: 24px; /* Adjust the font size as needed */
     color: #40E0D0; /* Optionally, you can specify the color here too */
 }
+
+
+#mainHeader {
+    display: none; /* Initially hide the header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: gold;
+    padding: 10px;
+    z-index: 999;
+}
+
+#mainHeader a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+        
     </style>
 </head>
 <body>
@@ -153,17 +173,16 @@
     </div>
 
     <div class="content">
-            <header>
-        <nav>
-            <a href="CV.html">CV</a>
-            <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
-            <a href="photos.html">Life @ Einstein</a>
-            <a href="#">Work & Coding</a>
-            <a href="StudyMusic.html">Study Music</a>
-            <a href="p.html">My Photography</a>
-            
-        </nav>
-    </header>
+        <header id="mainHeader"> <!-- Give an ID to the header -->
+    <nav>
+        <a href="CV.html">CV</a>
+        <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+        <a href="photos.html">Life @ Einstein</a>
+        <a href="#">Work & Coding</a>
+        <a href="StudyMusic.html">Study Music</a>
+        <a href="p.html">My Photography</a>
+    </nav>
+</header>
     <section class="bio">
         <div class="subname"></div>
         <p class="name">Robert Ortega, MS</p>
@@ -206,6 +225,16 @@
             audio.pause();
         }, 10000);
     </script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // After 7 seconds (2 seconds hold + 5 seconds fadeout), reveal the header
+    setTimeout(function() {
+        var header = document.getElementById('mainHeader');
+        header.style.display = 'block';
+    }, 7000);
+});
+</script>    
     
 </body>
 </html>
