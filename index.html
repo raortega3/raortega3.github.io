@@ -59,7 +59,7 @@
 
             .title2 {
             font-size: 17px; /* Adjust the font size for the title */
-            color: #0000FF; /* Optionally, specify the color */
+            color: Black; /* Optionally, specify the color */
             position: fixed;
             top: 60px; /* Adjust the distance below the name */
             left: 10px; /* Align with the name */
@@ -194,6 +194,28 @@
         header a:hover {
             text-decoration: underline;
         }
+
+      .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 15px;
+    z-index: 999;
+    text-align: left; /* Align the links to the left */
+}
+
+.menu a {
+    color: #000; /* Set link color to black */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Display links as block elements */
+    margin-bottom: 10px; /* Add spacing between links */
+}
+
+.menu a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}  
     </style>
 </head>
 <body>
@@ -202,12 +224,11 @@
     </div>
 
     <div class="content">
-        <div class="name">Robert Ortega, MS</div>
-        <div class="title">MD-PhD trainee</div> <!-- Added title -->
-        <div class="title2">Albert Einstein College of Medicine</div>
-        <div class="header-below">
-            <!--
-            <a href="CV.html">CV</a><br>
-            <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a><br>
-            <a href="photos.html">Life @ Einstein</a><br>
-            <a href="#">Work & Coding</a><br>
+       
+<div class="menu">
+    <a href="CV.html">CV</a><br>
+    <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a><br>
+    <a href="photos.html">Life @ Einstein</a><br>
+    <a href="#">Work & Coding</a><br>
+    <a href="StudyMusic.html">Study Music</a><br>
+</div>
