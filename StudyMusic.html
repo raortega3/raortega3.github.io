@@ -1,57 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chaos Art</title>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: black; /* Start with a black background */
-    }
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Art</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black; /* Start with a black background */
+        }
+
         /* Hide the video player */
         .video-container {
             display: none;
         }
+
+        .circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: white; /* White circle */
+            animation: fadeAnimation 10s forwards; /* 5 seconds fade animation */
+        }
+
+        @keyframes fadeAnimation {
+            0% {
+                opacity: 1; /* Start with full opacity */
+            }
+            100% {
+                opacity: 0; /* Fade out to completely transparent */
+            }
+        }
+
+        h1, a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0; /* Adjust margin to maintain spacing */
+            position: relative;
+            z-index: 1; /* Ensure links are above the background */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline link on hover */
+        }
     </style>
-    
-
-    .circle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        background-color: white; /* White circle */
-        animation: fadeAnimation 10s forwards; /* 5 seconds fade animation */
-    }
-
-    @keyframes fadeAnimation {
-        0% {
-            opacity: 1; /* Start with full opacity */
-        }
-        100% {
-            opacity: 0; /* Fade out to completely transparent */
-        }
-    }
-
-    h1, a {
-        color: white;
-        text-decoration: none;
-        margin: 10px 0; /* Adjust margin to maintain spacing */
-        position: relative;
-        z-index: 1; /* Ensure links are above the background */
-    }
-
-    a:hover {
-        text-decoration: underline; /* Underline link on hover */
-    }
-</style>
 </head>
 
 <body>
@@ -64,10 +61,10 @@
     <audio controls autoplay>
         <source src="https://www.youtube.com/watch?v=DJVnoYGPdNs" type="audio/mp3">
     </audio>
-<div class="circle"></div>
-<h1></h1>
-<a href="https://music.youtube.com/playlist?list=PLj1iJ8-zGzm7I5qTukPgckiylGO6sJtIC&si=CJ_gXtG4GlrLtPDq">Peaceful Ambient</a><br>
-<a href="https://music.youtube.com/playlist?list=PLj1iJ8-zGzm6ZcZMybATAjDrNQ0cdh39h&si=CiOeDSQVqpjloQFu">Dark Ambient</a>
+    <div class="circle"></div>
+    <h1></h1>
+    <a href="https://music.youtube.com/playlist?list=PLj1iJ8-zGzm7I5qTukPgckiylGO6sJtIC&si=CJ_gXtG4GlrLtPDq">Peaceful Ambient</a><br>
+    <a href="https://music.youtube.com/playlist?list=PLj1iJ8-zGzm6ZcZMybATAjDrNQ0cdh39h&si=CiOeDSQVqpjloQFu">Dark Ambient</a>
 
 </body>
 </html>
