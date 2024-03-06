@@ -64,7 +64,18 @@
             100% { opacity: 0; }
         }
 
+ 
         .content {
+             display: flex;
+}
+
+.text {
+  flex: 1; /* Takes up remaining space */
+}
+
+.image {
+  margin-left: 20px; /* Adjust as needed */
+}
             padding-top: 100px; /* Adjust according to your design */
             text-align: left;
         }
@@ -78,6 +89,7 @@
     height: auto; /* Allow the height to adjust automatically based on the width */
         }
 
+    
         .content .bio {
             max-width: 900px;
             margin: 20px auto;
