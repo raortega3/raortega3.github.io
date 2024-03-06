@@ -40,19 +40,19 @@
             top: 0px; /* Adjust as needed */
             left: 10px; /* Adjust as needed */
             margin: 0; /* Remove any default margins */
-            padding: 10; /* Remove any default padding */
+            padding: 0; /* Remove any default padding */
             z-index: 9999; /* Ensure it's above other elements */
             transition: opacity 1s ease-in-out; /* Apply transition effect to opacity property */
         }
 
         .title {
-            font-size: 14px; /* Adjust the font size to be larger */
+            font-size: 20px; /* Adjust the font size for the title */
             color: black; /* Optionally, specify the color */
             position: fixed;
-            top: 10px; /* Adjust as needed */
-            left: 10px; /* Adjust as needed */
+            top: 40px; /* Adjust the distance below the name */
+            left: 10px; /* Align with the name */
             margin: 0; /* Remove any default margins */
-            padding: 25; /* Remove any default padding */
+            padding: 0; /* Remove any default padding */
             z-index: 9999; /* Ensure it's above other elements */
             transition: opacity 1s ease-in-out; /* Apply transition effect to opacity property */
         }
@@ -112,7 +112,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(209, 178, 140, 0.5), rgba(255, 255, 255, 0.0)) no-repeat center bottom fixed, url('images/3B64A68D-9DE0-4535-9855-715EF7564157_1_105_c.jpeg') no-repeat center bottom fixed; 
+            background-image: url("images/3B64A68D-9DE0-4535-9855-715EF7564157_1_105_c.jpeg");
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -170,8 +170,8 @@
         /* Adjustments for smaller screens */
         @media (max-width: 768px) {
             .content img {
-                width: 150px; /* Adjust width for smaller screens */
-                height: auto; /* Ensure height adjusts accordingly */
+                width: 150px;
+                height: auto;
             }
 
             .bio {
@@ -182,7 +182,6 @@
         header a:hover {
             text-decoration: underline;
         }
-
     </style>
 </head>
 <body>
@@ -191,19 +190,11 @@
     </div>
 
     <div class="content">
-        <div class="name">Robert Ortega, MS</div><br>
+        <div class="name">Robert Ortega, MS</div>
+        <div class="title">MD-PhD trainee</div> <!-- Added title -->
         <div class="header-below">
             <!--
             <a href="CV.html">CV</a><br>
             <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a><br>
             <a href="photos.html">Life @ Einstein</a><br>
             <a href="#">Work & Coding</a><br>
-            <a href="StudyMusic.html">Study Music</a><br>
-            <a href="p.html">My Photography</a>
-            -->
-        </div>
-        <div class="content">
-            <div class="title">MD-PhD trainee</div><br>
-            <div class="title">Albert Einstein College of Medicine</div>
-        </div>
-   
