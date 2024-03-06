@@ -9,285 +9,35 @@
             display: none; /* Hide the video player */
         }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to top, rgba(209, 178, 140, 0.5), rgba(255, 255, 255, 0.0)) no-repeat center bottom fixed, url('images/3FC990BA-AC59-42D2-8803-74BB24C3B605_1_105_c.jpeg') no-repeat center bottom fixed; 
-    background-size: contain;
-    color: white;
-    text-align: center;
-}
-
-.header-below {
-    
-    text-decoration: none;
-    color: #40E0D0;
-    letter-spacing: 1px;
-    top: 75px; /* Adjust based on the height of the name header */
-    left: 0;
-    width: 100%;
-    background-color: transparent;
-    padding: 15px;
-    font-size: 16px;
-    z-index: 999;
-}
-
-/* Navigation link adjustments */
-header a {
-    color: #40E0D0;
-    text-decoration: none;
-    left: 0;
-    margin: 0 10px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 16px; /* Adjust size for mobile */
-}
-
-/* Bio section adjustments */
-.bio {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: row; /* Arrange items horizontally */
-   align-items: center; /* Align items vertically */
-    max-width: 45%; /* Adjust for mobile */
-    margin: 20px auto;
-    padding: 20px;
-    border: 3px solid #40E0D0;
-    border-radius: 30px;
-    background-color: white;
-    text-align: left;
-}
-
-.bio img {
-max-width: 25%; /* Ensure the image does not exceed the container width */
-    height: auto; /* Allow the height to adjust automatically based on the width */
-    margin-right: auto; /* Push the image to the right */
-}
-        
-.bio p {
-    margin-top: 0;
-    font-size: 14px; /* Adjust size for mobile */
-}
-
-/* Responsive adjustments for images */
-.content img {
-    display: block;
-    margin: 0 auto;
-    max-width: 35%;
-    height: auto;
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    .content img {
-        width: 150px; /* Adjust width for smaller screens */
-        height: auto; /* Ensure height adjusts accordingly */
-    }
-}
-        
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    header a {
-        font-size: 14px; /* Adjust size for smaller screens */
-    }
-
-    .bio {
-        padding: 10px;
-    }
-}
-
-        header a:hover {
-            text-decoration: underline;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to top, rgba(209, 178, 140, 0.5), rgba(255, 255, 255, 0.0)) no-repeat center bottom fixed, url('images/3FC990BA-AC59-42D2-8803-74BB24C3B605_1_105_c.jpeg') no-repeat center bottom fixed; 
+            background-size: contain;
+            color: white;
+            text-align: center;
         }
 
-.welcome-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("images/3B64A68D-9DE0-4535-9855-715EF7564157_1_105_c.jpeg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-size: 24px;
-    font-color: white;
-    font-weight: bold;
-    color: white;
-    opacity: 1;
-    animation: fadeInHoldFadeOut 10s forwards;
-}
-
-@keyframes fadeInHoldFadeOut {
-    0% { opacity: 1; }
-    15% { opacity: 1; } /* Hold for 2 seconds (15% of the animation duration) */
-    100% { opacity: 0; } /* Fade out from 15% to 100% (5 seconds) */
-}
-
-.content {
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-}
-
-.bio p b {
-    color: yellow;
-}
-
-
-.image {
-  margin-left: 20px; /* Adjust as needed */
-}
-            padding-top: 100px; /* Adjust according to your design */
-            text-align: left;
+        .header-below {
+            position: fixed;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            padding: 15px;
+            z-index: 999;
+            text-decoration: none;
+            color: #40E0D0;
+            letter-spacing: 1px;
+            font-size: 16px;
         }
 
-
-.content .bio {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            border: 3px solid #40E0D0;
-            border-radius: 20px;
-            background-color: white;
-            text-align: left;
-        }
-
-.content .bio p {
-            margin-top: 0;
-        }
-
-.content .bio p b {
-            color: yellow;
-        }
-
-        @media (max-width: 768px) {
-            .content img {
-                width: 150px;
-                height: 150px;
-            }
-        }
-
-.name {
-    font-size: 28px; /* Adjust the font size to be larger */
-    color: Black; /* Optionally, specify the color */
-    position: fixed;
-    top: 0px; /* Adjust as needed */
-    left: 10px; /* Adjust as needed */
-    margin: 0; /* Remove any default margins */
-    padding: 0; /* Remove any default padding */
-    z-index: 9999; /* Ensure it's above other elements */
-    transition: opacity 1s ease-in-out; /* Apply transition effect to opacity property */
-
-}
-
-#mainHeader {
-    display: none; /* Initially hide the header */
-    position: fixed;
-    top: 25;
-    left: 0;
-    width: 100%;
-    background-color: transparent;
-    padding: 10px;
-    z-index: 999;
-}
-
-#mainHeader a {
-    color: Black;
-    text-decoration: none;
-    margin: 0 10px;
-    display: flex;
-}
-
-        
-    </style>
-</head>
-<body>
-    <div class="welcome-screen" id="welcomeScreen">
-        <div class="welcome-text">
-           
-        </div>
-    </div>
-
-    <div class="content">
-
-<body>
-    <div class="name">Robert Ortega, MS</div><Br>
-    <div class="header-below">
-       <!--<a href="CV.html">CV</a><br>
-        <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a><br>
-        <a href="photos.html">Life @ Einstein</a><br>
-        <a href="#">Work & Coding</a><br>
-        <a href="StudyMusic.html">Study Music</a><br>
-        <a href="p.html">My Photography</a>-->
-    </div>
-    <div class="content">
-    <B>MD-PhD trainee</B><Br>
-    <B>Albert Einstein College of Medicine</B><Br>
-    </div>
-</body>
-       
-</div>
-
-
-    <script>
-        // After 6 seconds, fade out the welcome screen
-        setTimeout(function() {
-            document.getElementById('welcomeScreen').classList.add('welcome-hidden');
-        }, 6000);
-
-        // After 10 seconds, pause the audio
-        setTimeout(function() {
-            var audio = document.getElementById("myAudio");
-            audio.pause();
-        }, 10000);
-    </script>
-
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // After 7 seconds (2 seconds hold + 5 seconds fadeout), reveal the header
-    setTimeout(function() {
-        var header = document.getElementById('mainHeader');
-        header.style.display = 'block';
-    }, 7000);
-});
-</script>    
- 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var name = document.querySelector('.name');
-    name.style.opacity = '1'; // Set opacity to 1 to trigger fade-in effect
-});
-</script> 
-    
-</body>
-</html>
-<!--        <section class="bio">
-        <img src="images/5E56ED9E-2616-4950-9A30-C7FF45DA4356_1_105_c.jpeg" alt="!" class="top-right">
-        <ul>
-            <li><b>About me</b>: First year MD-PhD trainee at Albert Einstein College of Medicine. Father and husband.</li><br>
-            <li><B>Residence:</B> New York City (2011), <b>Hometown</b>: El Paso, Texas</li>
-            <br>
-            <li><b>Education:</b></li>
-            <ul>
-                <li>El Paso Community College: AA (General studies)</li>
-                <li>University of Texas at El Paso: BS (Psychology/Statistics), MS (Mathematical Statistics)</li>
-                <li>Albert Einstein College of Medicine (MSTP): MD, PhD</li><br>
-            </ul>
-            <li><b>Current Interests:</b></li>
-            <ul>
-                <li><b>Scientific queries</b>: Statistical genetics, phenotypic subgroups/variability, and prodromal biomarkers.</li>
-                <li><b>Medical specialties</b>: Neurology, psychiatry, internal medicine, pathology.</li>
-                <li><b>Leisure: </b>Reading non-fiction, running, fishing, the outdoors, photography, summertime</li>
-            </ul>
-            <br>
-            <li><b>Email</b>: roberto.ortega[at]einsteinmed.edu</li>
-        </ul>
-        <audio autoplay id="myAudio">
-            <source src="files/03-Haru.mp3">
-        </audio>    
-    </section>-->
+        .name {
+            font-size: 28px; /* Adjust the font size to be larger */
+            color: black; /* Optionally, specify the color */
+            position: fixed;
+            top: 0px; /* Adjust as needed */
+            left: 10px; /* Adjust as needed */
+            margin: 0; /* Remove any default margins */
+            pa
