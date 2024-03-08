@@ -16,9 +16,9 @@
 
         .content {
             position: absolute;
-            top: 7.5%; /* Adjusted to 15% from the top */
+            top: 15%; /* Adjusted to 15% from the top */
             left: 20px; /* Adjust as needed */
-            max-width: 350px; /* Adjust the maximum width of the content */
+            max-width: 45%; /* Adjusted maximum width */
             z-index: 2; /* Ensure content appears above the image */
         }
 
@@ -27,12 +27,14 @@
             font-weight: bold;
             color: black;
             margin-bottom: 10px;
+            max-width: 100%; /* Ensure name doesn't exceed container width */
         }
 
         .title {
             font-size: 18px;
             color: black;
             margin-bottom: 10px;
+            max-width: 100%; /* Ensure title doesn't exceed container width */
         }
 
         .menu a {
@@ -40,6 +42,7 @@
             text-decoration: none;
             display: block;
             margin-bottom: 10px;
+            max-width: 100%; /* Ensure links don't exceed container width */
         }
 
         .image-container {
