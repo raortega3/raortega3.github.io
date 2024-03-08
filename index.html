@@ -8,15 +8,30 @@
         /* CSS styles */
         body {
             margin: 0;
-            padding: 35vh 35vw; /* Add padding to the top and bottom */
+            padding: 0;
             font-family: Arial, sans-serif;
             background: url('images/Orozco.png') center top/60% auto no-repeat;
-            background-size: center/60%;
+            background-size: cover;
             color: white;
             text-align: left;
         }
 
-        /* Adjustments for name and school */
+        .border {
+            border: 5px solid white;
+            padding: 20vh 20vw;
+        }
+
+        .content {
+            position: absolute;
+            left: 5%;
+            top: 0;
+            bottom: 0;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
         .name {
             font-size: 36px;
             font-weight: bold;
@@ -30,24 +45,11 @@
             margin-bottom: 10px;
         }
 
-        /* Menu styles */
-        .menu {
-            text-align: left;
-            margin-top: 20px;
-        }
-
         .menu a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
-        }
-
-        /* Attribution styles */
-        .attribution {
-            font-size: 12px;
-            color: white;
-            margin-top: 20px; /* Add margin to the top */
-            text-align: center; /* Align to the center */
+            display: block;
+            margin: 0 0 10px;
         }
 
         /* Other CSS styles */
@@ -55,22 +57,19 @@
     </style>
 </head>
 <body>
-    <!-- Content section -->
-    <div class="content">
-        <div class="name">Robert Ortega, MS</div>
-        <div class="title">MD-PhD Student</div>
-        <div class="title">Albert Einstein College of Medicine</div>
-    </div>
-
-    <!-- Menu section -->
-    <div class="menu">
-        <a href="photos.html">About Me</a>
-        <a href="#">Work & Coding</a>
-    </div>
-
-    <!-- Attribution -->
-    <div class="attribution">
-        Artwork by José Clemente Orozco
+    <!-- Border section -->
+    <div class="border">
+        <!-- Content section -->
+        <div class="content">
+            <div class="name">Robert Ortega, MS</div>
+            <div class="title">MD-PhD Student</div>
+            <div class="title">Albert Einstein College of Medicine</div>
+            <!-- Menu section -->
+            <div class="menu">
+                <a href="photos.html">About Me</a>
+                <a href="#">Work & Coding</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
