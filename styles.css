@@ -24,3 +24,10 @@
     text-align: left;
     font-size: 24px;
 }
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
