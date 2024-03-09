@@ -76,10 +76,30 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0));
-            pointer-events: none;
+            width: 50%;
+            height: 50%;
+        }
+
+        .overlay1 {
+            background-color: rgba(64, 224, 208, 0.5); /* Turquoise */
+        }
+
+        .overlay2 {
+            background-color: rgba(128, 0, 128, 0.5); /* Purple */
+            top: 0;
+            left: 50%;
+        }
+
+        .overlay3 {
+            background-color: rgba(255, 0, 0, 0.5); /* Red */
+            top: 50%;
+            left: 0;
+        }
+
+        .overlay4 {
+            background-color: rgba(139, 69, 19, 0.5); /* Brown */
+            top: 50%;
+            left: 50%;
         }
 
         .menu a:hover {
@@ -96,7 +116,10 @@
 <body>
 
 <div class="image-container">
-    <div class="image-overlay"></div>
+    <div class="image-overlay overlay1"></div>
+    <div class="image-overlay overlay2"></div>
+    <div class="image-overlay overlay3"></div>
+    <div class="image-overlay overlay4"></div>
     <img src="images/D5A694B1-1972-422D-8530-C684E74C949E_1_105_c.jpeg" class="center-image">
 </div>
 
