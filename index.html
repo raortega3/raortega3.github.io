@@ -78,26 +78,24 @@
             left: 0;
             width: 50%;
             height: 50%;
+            background-color: rgba(66, 134, 244, 0.6); /* Turquoise with opacity */
+            z-index: 1;
         }
 
-        .overlay1 {
-            background-color: rgba(64, 224, 208, 0.5); /* Turquoise */
-        }
-
-        .overlay2 {
-            background-color: rgba(128, 0, 128, 0.5); /* Purple */
+        .image-overlay:nth-child(2) {
+            background-color: rgba(145, 61, 136, 0.6); /* Purple with opacity */
             top: 0;
             left: 50%;
         }
 
-        .overlay3 {
-            background-color: rgba(255, 0, 0, 0.5); /* Red */
+        .image-overlay:nth-child(3) {
+            background-color: rgba(255, 69, 0, 0.6); /* Red with opacity */
             top: 50%;
             left: 0;
         }
 
-        .overlay4 {
-            background-color: rgba(139, 69, 19, 0.5); /* Brown */
+        .image-overlay:nth-child(4) {
+            background-color: rgba(139, 69, 19, 0.6); /* Brown with opacity */
             top: 50%;
             left: 50%;
         }
@@ -116,10 +114,10 @@
 <body>
 
 <div class="image-container">
-    <div class="image-overlay overlay1"></div>
-    <div class="image-overlay overlay2"></div>
-    <div class="image-overlay overlay3"></div>
-    <div class="image-overlay overlay4"></div>
+    <div class="image-overlay"></div>
+    <div class="image-overlay"></div>
+    <div class="image-overlay"></div>
+    <div class="image-overlay"></div>
     <img src="images/D5A694B1-1972-422D-8530-C684E74C949E_1_105_c.jpeg" class="center-image">
 </div>
 
