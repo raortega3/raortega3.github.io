@@ -1,6 +1,9 @@
 /* CSS styles */
+
 .fade-container {
     position: relative;
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
 }
 
 .fade-image, .black-screen {
@@ -31,3 +34,4 @@
     display: block;
     margin-bottom: 10px;
 }
+
