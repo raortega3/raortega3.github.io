@@ -24,6 +24,25 @@
             background: radial-gradient(circle, rgba(0, 0, 0, 0.4), black); /* Radial gradient for the black circle */
         }
 
+    #random-numbers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 10px; /* Adjust font size as needed */
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    text-align: center;
+}
+
+/* Additional styling for better visualization */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
         .content {
             position: absolute;
             top: 15%;
@@ -74,11 +93,14 @@
                 width: 80%;
             }
         }
+
     </style>
 </head>
 <body>
 
-<div class="black-circle"></div>
+<div class="black-circle">
+     <div id="random-numbers"></div>
+</div>
 
 <div class="content">
     <div class="info-box">
@@ -91,6 +113,17 @@
         </div>
     </div>
 </div>
+
+    <script>
+        // Generate and fill the black circle with random numbers
+        const randomNumbersContainer = document.getElementById('random-numbers');
+        for (let i = 0; i < 100; i++) {
+            const randomNumber = Math.floor(Math.random() * 10); // Generate a random number between 0 and 9
+            const span = document.createElement('span');
+            span.textContent = randomNumber;
+            randomNumbersContainer.appendChild(span);
+        }
+    </script>
 
 </body>
 </html>
