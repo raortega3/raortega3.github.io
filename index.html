@@ -13,6 +13,11 @@
     color: white;
     text-align: left;
     position: relative; /* Make the body relative for absolute positioning */
+    background-color: #333; /* Set a background color */
+    background-image: url('images/background.jpg'); /* Add a background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-blend-mode: overlay; /* Blend background image with background color */
 }
 
 .content {
@@ -26,14 +31,14 @@
 .name {
     font-size: 36px;
     font-weight: bold;
-    color: black;
+    color: white; /* Set text color to white */
     margin-bottom: 10px;
     max-width: 100%; /* Ensure name doesn't exceed container width */
 }
 
 .title {
     font-size: 18px;
-    color: black;
+    color: white; /* Set text color to white */
     margin-bottom: 10px;
     max-width: 100%; /* Ensure title doesn't exceed container width */
 }
@@ -48,7 +53,7 @@
 }
 
 .menu a {
-    color: black;
+    color: white;
     text-decoration: none;
     display: block;
     margin-bottom: 10px;
@@ -63,8 +68,8 @@
 
 .center-image {
     width: 100%; /* Ensure image fills its container */
-    border: 10px solid rgba(0, 0, 0, 0.5); /* Add opaque border */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    border: 10px solid rgba(255, 255, 255, 0.5); /* Add opaque border */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Add a subtle shadow */
 }
         
 
@@ -93,8 +98,7 @@
 
         /* Hover effect for links */
         .menu a:hover {
-            background-color: #333; /* Change background color on hover */
-            color: #fff; /* Change text color on hover */
+            background-color: #555; /* Change background color on hover */
         }
 
         /* Media query for smaller screens */
@@ -105,13 +109,7 @@
         }
     </style>
 </head>
-<body>
-
-<!-- Image section -->
-<div class="image-container">
-    <div class="image-overlay"></div>
-    <img src="images/470EE518-179F-48B6-AF5E-8E0D7107650C_1_105_c.jpeg" class="center-image">
-</div>
+<body class="body">
 
 <!-- Content section -->
 <div class="content">
@@ -127,4 +125,3 @@
 
 </body>
 </html>
-
