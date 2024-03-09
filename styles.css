@@ -1,0 +1,26 @@
+/* CSS styles */
+.fade-container {
+    position: relative;
+}
+
+.fade-image, .black-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.black-screen {
+    background-color: black;
+    opacity: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    text-align: left;
+    font-size: 24px;
+}
