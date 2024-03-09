@@ -10,11 +10,44 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background: #333 url('images/D5A694B1-1972-422D-8530-C684E74C949E_1_105_c.jpeg') no-repeat center/cover;
+            height: 100%;
             color: white;
             text-align: left;
             position: relative;
-            height: 100vh;
+            background-image: url('images/D5A694B1-1972-422D-8530-C684E74C949E_1_105_c.jpeg');
+            background-size: cover;
+        }
+
+        /* Overlay squares */
+        .overlay {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            opacity: 0.3;
+        }
+
+        .top-left {
+            top: 0;
+            left: 0;
+            background-color: rgba(64, 224, 208, 0.5); /* Turquoise */
+        }
+
+        .top-right {
+            top: 0;
+            right: 0;
+            background-color: rgba(128, 0, 128, 0.5); /* Purple */
+        }
+
+        .bottom-left {
+            bottom: 0;
+            left: 0;
+            background-color: rgba(255, 0, 0, 0.5); /* Red */
+        }
+
+        .bottom-right {
+            bottom: 0;
+            right: 0;
+            background-color: rgba(139, 69, 19, 0.5); /* Brown */
         }
 
         .content {
@@ -56,50 +89,6 @@
             white-space: nowrap;
         }
 
-        .center-image {
-            width: 100%;
-            border: 10px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-            object-fit: cover;
-        }
-
-        .image-container {
-            position: relative;
-            display: inline-block;
-            margin-right: 20px;
-            width: 50%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 50%;
-            background-color: rgba(64, 224, 208, 0.6); /* Turquoise with opacity */
-            z-index: 1;
-        }
-
-        .image-overlay:nth-child(2) {
-            background-color: rgba(0, 0, 0, 0); /* Transparent */
-            top: 0;
-            left: 50%;
-        }
-
-        .image-overlay:nth-child(3) {
-            background-color: rgba(0, 0, 0, 0); /* Transparent */
-            top: 50%;
-            left: 0;
-        }
-
-        .image-overlay:nth-child(4) {
-            background-color: rgba(0, 0, 0, 0); /* Transparent */
-            top: 50%;
-            left: 50%;
-        }
-
         .menu a:hover {
             background-color: #555;
         }
@@ -113,13 +102,10 @@
 </head>
 <body>
 
-<div class="image-container">
-    <div class="image-overlay"></div>
-    <div class="image-overlay"></div>
-    <div class="image-overlay"></div>
-    <div class="image-overlay"></div>
-    <img src="images/D5A694B1-1972-422D-8530-C684E74C949E_1_105_c.jpeg" class="center-image">
-</div>
+<div class="overlay top-left"></div>
+<div class="overlay top-right"></div>
+<div class="overlay bottom-left"></div>
+<div class="overlay bottom-right"></div>
 
 <div class="content">
     <div class="info-box">
