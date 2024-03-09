@@ -3,23 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <title>Robert Ortega</title>
+    <style>
+        /* CSS styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to top left, black, #888, #aaa, white); /* Four variations of gray */
+        }
+
+
+        .content {
+            position: absolute;
+            top: 15%;
+            left: 20px;
+            max-width: 45%;
+            z-index: 2;
+            background-color: rgba(255, 165, 0, 0.65); /* Opaque peach/burnt orange */
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .info-box {
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            white-space: nowrap;
+        }
+
+        .title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .menu {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            white-space: nowrap;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 768px) {
+            .content {
+                width: 80%;
+            }
+        }
+    </style>
+
 <body>
-    <!-- Add the fade-container class here -->
-    <div class="fade-container">
-        <img class="fade-image" src="images/3B64A68D-9DE0-4535-9855-715EF7564157_1_105_c.jpeg">
-        <img class="fade-image" src="images/3FC990BA-AC59-42D2-8803-74BB24C3B605_1_105_c.jpeg">
-        <div class="black-screen"></div>
-    </div>
-    <div class="menu">
+
+<div class="content">
         <a href="CV.html">CV</a>
         <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
         <a href="StudyMusic.html">Study Music</a>
         <a href="photos.html">Life @ Einstein</a>
         <a href="#">Work & Coding</a>
     </div>
-    <script src="script.js"></script>
+
+
+
 </body>
 </html>
