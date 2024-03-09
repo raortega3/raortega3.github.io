@@ -14,40 +14,18 @@
             color: white;
             text-align: left;
             position: relative;
-            background-image: url('images/D5A694B1-1972-422D-8530-C684E74C949E_1_105_c.jpeg');
-            background-size: cover;
+            background: linear-gradient(to top left, #444, #666, #888, #aaa); /* Four variations of gray */
         }
 
-        /* Overlay squares */
-        .overlay {
+        .black-circle {
             position: absolute;
-            width: 50%;
-            height: 50%;
-            opacity: 0.5;
-        }
-
-        .top-left {
-            top: 0;
-            left: 0;
-            background: linear-gradient(to bottom right, rgba(64, 224, 208, 0.5), rgba(128, 0, 128, 0.5)); /* Turquoise to Purple */
-        }
-
-        .top-right {
-            top: 0;
-            right: 0;
-            background: linear-gradient(to bottom left, rgba(255, 0, 0, 0.5), rgba(139, 69, 19, 0.5)); /* Red to Brown */
-        }
-
-        .bottom-left {
-            bottom: 0;
-            left: 0;
-            background: linear-gradient(to top right, rgba(139, 69, 19, 0.5), rgba(64, 224, 208, 0.5)); /* Brown to Turquoise */
-        }
-
-        .bottom-right {
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(to top left, rgba(128, 0, 128, 0.5), rgba(255, 0, 0, 0.5)); /* Purple to Red */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            border-radius: 50%;
         }
 
         .content {
@@ -102,10 +80,7 @@
 </head>
 <body>
 
-<div class="overlay top-left"></div>
-<div class="overlay top-right"></div>
-<div class="overlay bottom-left"></div>
-<div class="overlay bottom-right"></div>
+<div class="black-circle"></div>
 
 <div class="content">
     <div class="info-box">
