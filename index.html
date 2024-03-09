@@ -5,123 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robert Ortega</title>
     <style>
-/* CSS styles */
-.body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    height: 75%;
-    color: white;
-    text-align: left;
-    position: relative; /* Make the body relative for absolute positioning */
-    background-color: #333; /* Set a background color */
-    background-image: url('images/D5A694B1-1972-422D-8530-C684E74C949E_1_105_c.jpeg') no-repeat; /* Add a background image */
-    background-size: cover; /* Cover the entire viewport */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Corrected syntax */
-    background-blend-mode: overlay; /* Blend background image with background color */
-}
-
-.content {
-    position: absolute;
-    top: 15%; /* Adjusted to 15% from the top */
-    left: 20px; /* Adjust as needed */
-    max-width: 45%; /* Adjusted maximum width */
-    z-index: 2; /* Ensure content appears above the image */
-}
-
-.name {
-    font-size: 36px;
-    font-weight: bold;
-    color: white; /* Set text color to white */
-    margin-bottom: 10px;
-    max-width: 100%; /* Ensure name doesn't exceed container width */
-    white-space: nowrap; /* Prevent name from wrapping */
-}
-
-.title {
-    font-size: 18px;
-    color: white; /* Set text color to white */
-    margin-bottom: 10px;
-    max-width: 100%; /* Ensure title doesn't exceed container width */
-}
-
-.menu {
-    position: absolute;
-    top: 10px;
-    left: calc(100% + 20px); /* Position the menu to the right of the image */
-    color: white;
-    text-align: left;
-    font-size: 24px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
-    max-width: 100%; /* Ensure links don't exceed container width */
-    white-space: nowrap; /* Prevent links from wrapping */
-}
-
-.image-container {
-    position: relative;
-    display: inline-block; /* Display the image container inline */
-    margin-right: 20px; /* Add some margin between the image and menu */
-}
-
-.center-image {
-    width: 100%; /* Ensure image fills its container */
-    border: 10px solid rgba(255, 255, 255, 0.5); /* Add opaque border */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Add a subtle shadow */
-    object-fit: cover; /* Ensure image covers the container without distortion */
-}
-        
-
-        /* Container for the image */
-        .image-container {
+        /* CSS styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #333 url('images/D5A694B1-1972-422D-8530-C684E74C949E_1_105_c.jpeg') no-repeat center/cover;
+            color: white;
+            text-align: left;
             position: relative;
-            width: 100%;
             height: 100vh;
-            overflow: hidden;
-            background-color: #000;
         }
 
-        /* Overlay to soften the edges of the image */
+        .content {
+            position: absolute;
+            top: 15%;
+            left: 20px;
+            max-width: 45%;
+            z-index: 2;
+        }
+
+        .name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            white-space: nowrap;
+        }
+
+        .title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .menu {
+            position: absolute;
+            top: 10px;
+            left: calc(100% + 20px);
+            font-size: 24px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            white-space: nowrap;
+        }
+
+        .center-image {
+            width: 100%;
+            border: 10px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            object-fit: cover;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+        }
+
         .image-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0)); /* Gradient from semi-transparent black to transparent */
-            pointer-events: none; /* Allow clicks to pass through overlay */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0));
+            pointer-events: none;
         }
 
-
- 
-
-        /* Hover effect for links */
         .menu a:hover {
-            background-color: #555; /* Change background color on hover */
+            background-color: #555;
         }
 
-        /* Media query for smaller screens */
         @media screen and (max-width: 768px) {
             .content {
-                width: 80%; /* Reduce width on smaller screens */
+                width: 80%;
             }
         }
     </style>
 </head>
-<body class="body">
+<body>
 
-<!-- Content section -->
+<div class="image-container">
+    <div class="image-overlay"></div>
+    <img src="images/D5A694B1-1972-422D-8530-C684E74C949E_1_105_c.jpeg" class="center-image">
+</div>
+
 <div class="content">
     <div class="name">Robert Ortega</div>
     <div class="title">MD-PhD Student</div>
     <div class="title">Albert Einstein College of Medicine</div>
-    <!-- Menu section -->
     <div class="menu">
         <a href="AboutMe.html">About Me</a>
         <a href="#">Work & Coding</a>
