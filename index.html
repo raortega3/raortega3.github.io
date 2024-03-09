@@ -17,17 +17,21 @@
 
         /* Container for the image */
         .image-container {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #000;
         }
 
         /* Center the image within its container */
         .center-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             max-width: 100%;
-            height: auto;
+            max-height: 100%;
             border-radius: 50%; /* Make the image circular */
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
         }
@@ -40,35 +44,4 @@
             transform: translate(-50%, -50%);
             z-index: 2;
             text-align: center; /* Align content to center */
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-        }
-
-        /* Name styling */
-        .name {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* Title styling */
-        .title {
-            font-size: 18px;
-            margin-bottom: 20px; /* Increase margin */
-        }
-
-        /* Menu styling */
-        .menu {
-            margin-top: 20px; /* Add space between content and menu */
-        }
-
-        /* Link styling */
-        .menu a {
-            color: #333; /* Text color */
-            text-decoration: none;
-            display: inline-block;
-            margin: 0 10px; /* Add space between links */
-            padding: 5px 10px; /* Add padding */
-           
+            background-color: rgba(255, 
