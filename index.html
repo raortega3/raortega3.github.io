@@ -14,34 +14,24 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(to top left, black, #888, #aaa, white); /* Four variations of gray */
+            background: linear-gradient(to top, #8a98a7, #e6e6e6); /* Soft gradient resembling the sky */
         }
 
         .black-circle {
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(0, 0, 0, 0.4), black); /* Radial gradient for the black circle */
+            background: radial-gradient(circle, #272727, #000); /* Dark gradient for a serene night sky */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-    #random-numbers {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 4px; /* Adjust font size as needed */
-    font-family: Arial, sans-serif;
-    line-height: 1;
-    text-align: center;
-}
-
-/* Additional styling for better visualization */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
+        #random-numbers {
+            color: white;
+            font-size: 3px; /* Reduced font size for a subtle appearance */
+            font-family: Arial, sans-serif;
+        }
 
         .content {
             position: absolute;
@@ -49,7 +39,7 @@ html, body {
             left: 20px;
             max-width: 45%;
             z-index: 2;
-            background-color: rgba(255, 165, 0, 0.65); /* Opaque peach/burnt orange */
+            background-color: rgba(255, 200, 150, 0.9); /* Soft peach color resembling warmth and comfort */
             border-radius: 10px;
             padding: 20px;
         }
@@ -93,13 +83,14 @@ html, body {
                 width: 80%;
             }
         }
-
     </style>
 </head>
 <body>
 
 <div class="black-circle">
-     <div id="random-numbers"></div>
+    <div id="random-numbers">
+        <!-- JavaScript will populate random numbers here -->
+    </div>
 </div>
 
 <div class="content">
@@ -114,16 +105,16 @@ html, body {
     </div>
 </div>
 
-    <script>
-        // Generate and fill the black circle with random numbers
-        const randomNumbersContainer = document.getElementById('random-numbers');
-        for (let i = 0; i < 100; i++) {
-            const randomNumber = Math.floor(Math.random() * 10); // Generate a random number between 0 and 9
-            const span = document.createElement('span');
-            span.textContent = randomNumber;
-            randomNumbersContainer.appendChild(span);
-        }
-    </script>
+<script>
+    // JavaScript for generating and filling the black circle with random numbers
+    const randomNumbersContainer = document.getElementById('random-numbers');
+    for (let i = 0; i < 100; i++) {
+        const randomNumber = Math.floor(Math.random() * 10); // Generate a random number between 0 and 9
+        const span = document.createElement('span');
+        span.textContent = randomNumber;
+        randomNumbersContainer.appendChild(span);
+    }
+</script>
 
 </body>
 </html>
