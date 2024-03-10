@@ -1,4 +1,4 @@
-c<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,13 +14,32 @@ c<!DOCTYPE html>
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(to top left, black, #888, #aaa, white); /* Four variations of gray */
             background-image: url('images/5FC8FA4F-F43C-4FED-8B02-A874B572B046_1_105_c.jpeg'); /* Background image */
             background-size: cover; /* Cover the entire viewport */
             background-position: center; /* Center the background image */
-            opacity: 0.75; /* Reduced opacity for the background image */
+            background-color: rgba(0, 0, 0, 0.75); /* Black overlay with reduced opacity */
         }
 
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 45vh;
+            padding: 20px; /* Add padding for spacing */
+        }
+
+        .black-box {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black box */
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .about-text {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+        }
 
         .content {
             position: absolute;
@@ -28,26 +47,6 @@ c<!DOCTYPE html>
             left: 20px;
             max-width: 45%;
             z-index: 2;
-            background-color: rgba(255, 165, 0, 0.65); /* Opaque peach/burnt orange */
-            border-radius: 10px;
-            padding: 20px;
-        }
-
-        .info-box {
-            border-radius: 10px;
-            padding: 20px;
-        }
-
-        .name {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            white-space: nowrap;
-        }
-
-        .title {
-            font-size: 18px;
-            margin-bottom: 10px;
         }
 
         .menu {
@@ -64,7 +63,9 @@ c<!DOCTYPE html>
         }
 
         .menu a:hover {
-            background-color: #555;
+            background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white on hover */
+            border-radius: 5px;
+            padding: 5px;
         }
 
         @media screen and (max-width: 768px) {
@@ -72,57 +73,32 @@ c<!DOCTYPE html>
                 width: 80%;
             }
         }
-
- .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45vh;
-}
-
-.black-box {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-
-.about-text {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
-}       
     </style>
-
+</head>
 <body>
 
 <div class="container">
-        <div class="black-box">
-            <p class="about-text">
-<b>Name: </b>Robert Ortega<br>
-<b>About & Interests: </b>Father and husband. The outdoors, running, reading, fishing. <br>
-<b>Hometown: </b>El Paso, TX<br>
-<b>Currently: </b>MD-PhD student<br>
-<b>Medical School: </b>Albert Einstein College of Medicine<br>
-            </p>
-        </div>
+    <div class="black-box">
+        <p class="about-text">
+            <b>Name:</b> Robert Ortega<br>
+            <b>About & Interests:</b> Father and husband. The outdoors, running, reading, fishing. <br>
+            <b>Hometown:</b> El Paso, TX<br>
+            <b>Currently:</b> MD-PhD student<br>
+            <b>Medical School:</b> Albert Einstein College of Medicine<br>
+        </p>
     </div>
-    
-    <div class="content">
-<div class="menu">
-        <a href="CV.html">CV</a><br>
-        <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a><br>
-        <a href="#">Work & Coding</a><br>
-        <a href="p.html">My Photos</a><br>
-        <a href="photos.html">Life @ Einstein</a><br>
-        <a href="StudyMusic.html">Study Music</a><br>
-        
-        
+</div>
+
+<div class="content">
+    <div class="menu">
+        <a href="CV.html">CV</a>
+        <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+        <a href="#">Work & Coding</a>
+        <a href="p.html">My Photos</a>
+        <a href="photos.html">Life @ Einstein</a>
+        <a href="StudyMusic.html">Study Music</a>
     </div>
-        </div>
-
-
+</div>
 
 </body>
 </html>
