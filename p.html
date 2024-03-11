@@ -55,8 +55,8 @@
     .modal-content {
         margin: auto;
         display: block;
-        max-width: 90%;
-        max-height: 90%;
+        max-width: 90%; /* Adjusted max-width */
+        max-height: 80%; /* Adjusted max-height */
     }
 
     .modal-content img {
@@ -86,7 +86,7 @@
 
 
 <div class="gallery">
-<div class="thumbnail-container" onclick="openModal('images/7DF5AB4C-AEC7-4B6F-8579-77A6D8F1C0FF_1_105_c.jpeg')">
+    <div class="thumbnail-container" onclick="openModal('images/7DF5AB4C-AEC7-4B6F-8579-77A6D8F1C0FF_1_105_c.jpeg')">
         <img src="images/7DF5AB4C-AEC7-4B6F-8579-77A6D8F1C0FF_1_105_c.jpeg" alt="Photo 2" class="thumbnail">
    </div> 
     
@@ -116,8 +116,32 @@
     
 <div class="thumbnail-container" onclick="openModal('images/18DB4B71-89E5-4515-A9C6-6A2979E0856B_1_105_c.jpeg')"> 
   <img src="images/18DB4B71-89E5-4515-A9C6-6A2979E0856B_1_105_c.jpeg" alt="Photo 2" class="thumbnail">
-</div> 
+
+
+
+    
 </div>
+
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+function openModal(imgSrc) {
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById('modalImg');
+    modal.style.display = "block";
+    modalImg.src = imgSrc;
+}
+
+function closeModal() {
+    document.getElementById('myModal').style.display = "none";
+}
+</script>
+
+</body>
+</html>
 
 <!--     
 
