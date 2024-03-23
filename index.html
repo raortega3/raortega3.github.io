@@ -14,11 +14,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(to top, #8a98a7, #e6e6e6); /* Soft gradient resembling the sky */
-            background-image: url('images/3584F86F-0B73-4EBB-AA0C-62A158CA4876_1_105_c.jpeg'); /* Background image */
-            background-size: cover; /* Cover the entire viewport */
-            background-position: center; /* Center the background image */
-            opacity: 0.8; /* Reduced opacity for the background image */
+            background: linear-gradient(to top, #8a98a7, #e6e6e6);
+            background-image: url('images/3584F86F-0B73-4EBB-AA0C-62A158CA4876_1_105_c.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
         }
 
         .content {
@@ -26,8 +26,9 @@
             top: 15%;
             left: 20px;
             max-width: 45%;
+            width: calc(100% - 40px); /* Responsive width */
             z-index: 2;
-            background-color: rgba(255, 200, 150, 0.9); /* Soft peach color resembling warmth and comfort */
+            background-color: rgba(255, 200, 150, 0.9);
             border-radius: 10px;
             padding: 20px;
         }
@@ -70,6 +71,22 @@
         @media screen and (max-width: 768px) {
             .content {
                 width: 80%;
+                left: 0;
+                top: auto;
+                bottom: 0;
+                margin: 20px;
+            }
+
+            .name {
+                font-size: 28px;
+            }
+
+            .title {
+                font-size: 16px;
+            }
+
+            .menu {
+                font-size: 20px;
             }
         }
     </style>
@@ -92,7 +109,7 @@
     // JavaScript for generating and filling the black circle with random numbers
     const randomNumbersContainer = document.getElementById('random-numbers');
     for (let i = 0; i < 100; i++) {
-        const randomNumber = Math.floor(Math.random() * 10); // Generate a random number between 0 and 9
+        const randomNumber = Math.floor(Math.random() * 10);
         const span = document.createElement('span');
         span.textContent = randomNumber;
         randomNumbersContainer.appendChild(span);
@@ -111,4 +128,3 @@
 
 </body>
 </html>
-
