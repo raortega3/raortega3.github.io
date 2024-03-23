@@ -71,8 +71,17 @@
         }
 
         @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 10px;
+            }
             .content {
-                width: 80%;
+                position: static;
+                max-width: none;
+                margin-top: 20px;
+            }
+            .black-box {
+                max-width: 100%;
             }
         }
     </style>
@@ -89,16 +98,15 @@
             <b>Medical School:</b> Albert Einstein College of Medicine<br>
         </p>
     </div>
-</div>
-
-<div class="content">
-    <div class="menu">
-        <a href="CV.html">CV</a>
-        <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
-        <a href="#">Work & Coding</a>
-        <a href="p.html">My Photos</a>
-        <a href="photos.html">Life @ Einstein</a>
-        <a href="StudyMusic.html">Study Music</a>
+    <div class="content">
+        <div class="menu">
+            <a href="CV.html">CV</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=dPz16RUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+            <a href="#">Work & Coding</a>
+            <a href="p.html">My Photos</a>
+            <a href="photos.html">Life @ Einstein</a>
+            <a href="StudyMusic.html">Study Music</a>
+        </div>
     </div>
 </div>
 
